@@ -1,0 +1,15 @@
+// Tailwind
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@layer base {
+  html {
+    @apply bg-white max-w-2xl mx-auto px-4;
+  }
+}
