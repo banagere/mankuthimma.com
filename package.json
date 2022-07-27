@@ -23,6 +23,7 @@
     "rehype-autolink-headings": "^6.1.1",
     "rehype-highlight": "^5.0.2",
     "rehype-slug": "^5.0.1",
+    "remark-gfm": "^3.0.1",
     "sass": "^1.53.0",
     "webpack": "^5.73.0"
   },
