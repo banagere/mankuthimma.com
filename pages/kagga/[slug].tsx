@@ -27,11 +27,6 @@ export default function PostPage({ post }: { post: MDXPost }) {
       <h1 className="mt-5 text-3xl font-bold">
         {post.meta.title}
       </h1>
-      <div className="py-2">
-        <span className="px-2 py-1 text-sm text-white rounded-md bg-bronze-400">
-          {post.meta.veda}
-        </span>
-      </div>
 
       <article className="pt-5 prose prose-h1:text-2xl prose-h2:text-xl prose-h2:text-gray-400 prose-h3:text-lg prose-h3:text-bronze-500 prose-h3:mt-2 prose-headings:m-0 prose-img:rounded-md">
         <MDXRemote {...post.source} components={{ Image }} />

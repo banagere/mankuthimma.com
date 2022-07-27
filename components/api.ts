@@ -33,12 +33,10 @@ interface Post {
 }
 
 export interface PostMeta {
-  excerpt: string;
   slug: string;
   title: string;
-  veda: string[];
-  date: string;
   weight: number;
+  number: string;
 }
 
 export const getPostFromSlug = (slug: string): Post => {
@@ -50,11 +48,9 @@ export const getPostFromSlug = (slug: string): Post => {
     content,
     meta: {
       slug,
-      excerpt: data.excerpt ?? "",
       title: data.title ?? slug,
-      veda: data.veda ?? [],
-      date: (data.date ?? new Date()).toString(),
       weight: data.weight,
+      number: data.number,
     },
   };
 };
