@@ -1,11 +1,13 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 export default function Header() {
   return (
     <>
-      <div className='text-3xl font-bold text-center my-9 hover:text-neutral-600 dark:hover:text-neutral-300'>
+      <div className="py-8 text-center">
+        <span className="text-3xl font-bold my-9 hover:text-gold-500 dark:text-white-100">
           <Link href="/">Mankuthimmana Kagga</Link>
+        </span>
       </div>
     </>
-  )
+  );
 }

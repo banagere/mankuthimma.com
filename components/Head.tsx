@@ -65,6 +65,11 @@ export default function Main() {
           content="#FFFFFF"
           media="(prefers-color-scheme: light)"
         />
+        <meta
+          name="theme-color"
+          content="#202022"
+          media="(prefers-color-scheme: dark)"
+        />
       </Head>
 
       {/* Chiffre Script */}

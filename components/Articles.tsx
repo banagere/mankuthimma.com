@@ -7,10 +7,14 @@ export default function Articles({ posts }: { posts: PostMeta[] }) {
       <ul className="flex flex-col gap-1">
         {posts.map((post) => (
           <li className="py-px" key={post.slug}>
-            <text className="px-5 font-medium tracking-widest align-middle">{post.number}</text>
-            <span className="text-xl font-bold align-top hover:text-bronze-500">
-              <Link href={`/kagga/${post.slug}`}>{post.title}</Link>
-            </span>
+            <div className="flex items-start">
+              <text className="px-5 font-medium tracking-widest text-right text-gold-500">
+                {post.number}
+              </text>
+              <span className="ml-1 text-xl font-semibold hover:text-gold-500 dark:text-white-100">
+                <Link href={`/kagga/${post.slug}`}>{post.title}</Link>
+              </span>
+            </div>
           </li>
         ))}
       </ul>

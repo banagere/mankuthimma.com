@@ -1,23 +1,22 @@
 .prose .anchor {
-    @apply absolute invisible no-underline;
-  
-    margin-left: -1em;
-    padding-right: 0.5em;
-    width: 80%;
-    max-width: 700px;
-    cursor: pointer;
-  }
-  
-  .anchor:hover {
-    @apply visible;
-  }
-  
-  .prose .anchor:after {
-    @apply text-gray-300 dark:text-gray-700;
-    content: "#";
-  }
-  
-  .prose *:hover > .anchor {
-    @apply visible;
-  }
-  
+  @apply absolute invisible no-underline;
+
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
+  cursor: pointer;
+}
+
+.anchor:hover {
+  @apply visible;
+}
+
+.prose .anchor:after {
+  @apply text-gold-400;
+  content: "#";
+}
+
+.prose *:hover > .anchor {
+  @apply visible;
+}
