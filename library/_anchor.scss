@@ -9,7 +9,7 @@
 }
 
 .anchor:hover {
-  @apply visible;
+  @apply sm:visible invisible;
 }
 
 .prose .anchor:after {
@@ -18,5 +18,5 @@
 }
 
 .prose *:hover > .anchor {
-  @apply visible;
+  @apply sm:visible invisible;
 }
