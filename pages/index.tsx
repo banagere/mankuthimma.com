@@ -1,18 +1,43 @@
-import { getAllPosts, PostMeta } from "../components/api";
-import Articles from "../components/Articles";
+import Link from "next/link";
+import { allPosts, Post } from "contentlayer/generated";
 
-export default function Home({ posts }: { posts: PostMeta[] }) {
+export async function getStaticProps() {
+  const posts: Post[] = allPosts.sort((a, b) => {
+    if (a.weight > b.weight) return 1;
+    if (a.weight < b.weight) return -1;
+    return 0;
+  });
+  return { props: { posts } };
+}
+
+function Articles(post: Post) {
   return (
     <>
-      <div className="max-w-3xl px-4 mx-auto">
-        <Articles posts={posts} />
-      </div>
+      <ul>
+        <li className="grid grid-cols-2 text-lg">
+          <Link href={`${post.url}`}>
+            <a className="font-semibold hover:text-gold-500 dark:text-white-100">
+              {post.title}
+            </a>
+          </Link>
+
+          <text className="font-medium tracking-widest text-right text-gold-500">
+            {post.number}
+          </text>
+        </li>
+      </ul>
     </>
   );
 }
 
-export async function getStaticProps() {
-  const posts = getAllPosts().map((post) => post.meta);
-
-  return { props: { posts } };
+export default function Home({ posts }: { posts: Post[] }) {
+  return (
+    <>
+      <ul className="flex flex-col">
+        {posts.map((post, idx) => (
+          <Articles key={idx} {...post} />
+        ))}
+      </ul>
+    </>
+  );
 }

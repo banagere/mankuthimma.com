@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mankuthimma.com
+
+# Sitemaps
+Sitemap: https://mankuthimma.com/sitemap.xml
