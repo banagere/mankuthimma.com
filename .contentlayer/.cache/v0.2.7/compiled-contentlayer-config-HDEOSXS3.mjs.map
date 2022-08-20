@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../contentlayer.config.ts"],
+  "sourcesContent": ["import {\n  ComputedFields,\n  defineDocumentType,\n  makeSource,\n} from \"contentlayer/source-files\";\n\nconst computedFields: ComputedFields = {\n  url: {\n    type: \"string\",\n    resolve: (doc) => `/kagga/${doc._raw.flattenedPath}`,\n  },\n};\n\nconst Post = defineDocumentType(() => ({\n  name: \"Post\",\n  filePathPattern: `**/*.mdx`,\n  contentType: \"mdx\",\n  fields: {\n    title: { type: \"string\", required: true },\n    weight: { type: \"number\", required: true },\n    number: { type: \"string\", required: true },\n    slug: { type: \"string\", required: true },\n  },\n  computedFields,\n}));\n\nexport default makeSource({\n  contentDirPath: \"kagga\",\n  documentTypes: [Post],\n});\n"],
+  "mappings": ";AAAA;AAAA,EAEE;AAAA,EACA;AAAA,OACK;AAEP,IAAM,iBAAiC;AAAA,EACrC,KAAK;AAAA,IACH,MAAM;AAAA,IACN,SAAS,CAAC,QAAQ,UAAU,IAAI,KAAK;AAAA,EACvC;AACF;AAEA,IAAM,OAAO,mBAAmB,OAAO;AAAA,EACrC,MAAM;AAAA,EACN,iBAAiB;AAAA,EACjB,aAAa;AAAA,EACb,QAAQ;AAAA,IACN,OAAO,EAAE,MAAM,UAAU,UAAU,KAAK;AAAA,IACxC,QAAQ,EAAE,MAAM,UAAU,UAAU,KAAK;AAAA,IACzC,QAAQ,EAAE,MAAM,UAAU,UAAU,KAAK;AAAA,IACzC,MAAM,EAAE,MAAM,UAAU,UAAU,KAAK;AAAA,EACzC;AAAA,EACA;AACF,EAAE;AAEF,IAAO,8BAAQ,WAAW;AAAA,EACxB,gBAAgB;AAAA,EAChB,eAAe,CAAC,IAAI;AACtB,CAAC;",
+  "names": []
+}
