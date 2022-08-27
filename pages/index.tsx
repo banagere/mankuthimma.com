@@ -1,13 +1,23 @@
 import Link from "next/link";
 import { allPosts, Post } from "contentlayer/generated";
+import { pick } from "contentlayer/client";
 
 export async function getStaticProps() {
-  const posts: Post[] = allPosts.sort((a, b) => {
-    if (a.weight > b.weight) return 1;
-    if (a.weight < b.weight) return -1;
-    return 0;
-  });
-  return { props: { posts } };
+    // const posts: Post[] = allPosts.sort((a, b) => {
+    //     if (a.weight > b.weight) return 1;
+    //     if (a.weight < b.weight) return -1;
+    //     return 0;
+    // });
+
+    const sortedPosts = allPosts.sort((a, b) => {
+        if (a.weight > b.weight) return 1;
+        if (a.weight < b.weight) return -1;
+        return 0;
+    });
+
+    const posts = sortedPosts.map((post) => pick(post, ["url", "title", "number"]))
+
+    return { props: { posts } };
 }
 
 function Articles(post: Post) {
