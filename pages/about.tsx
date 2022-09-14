@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 export default function About() {
   return (
     <>
@@ -38,6 +39,27 @@ export default function About() {
         <p>
           Please buy the book to support the publishers, printers, editors and
           authors!
+        </p>
+        <hr />
+        <p>
+          500+ unique visitors come to this site. If would be of great help if
+          you'd offer assistance by{" "}
+          <a
+            href="https://www.buymeacoffee.com/banagere"
+            rel="noreferrer noopener"
+            target={"_blank"}
+          >
+            Buying me a Coffee
+          </a>
+          {" or "}
+          <a
+            href="https://github.com/banagere/mankuthimma.com"
+            rel="noreferrer noopener"
+            target={"_blank"}
+          >
+            Sponsoring on Github
+          </a>
+          .
         </p>
       </div>
     </>
