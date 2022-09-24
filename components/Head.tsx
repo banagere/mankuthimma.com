@@ -72,15 +72,11 @@ export default function Main() {
         />
       </Head>
 
-      {/* Chiffre Script */}
+      {/* Goatcounter Script */}
       <Script
+        data-goatcounter="https://mankuthimma.goatcounter.com/count"
         async
-        id="chiffre:analytics"
-        src="https://chiffre.io/analytics.js"
-        data-chiffre-project-id="CZVmyfVQwPYNGFl5"
-        data-chiffre-public-key="pk.RV8UdzDHjDDiNbz8f0mH4UkY7kZAHgp0ssnx53LXTDg"
-        referrerPolicy="origin"
-        crossOrigin="anonymous"
+        src="//gc.zgo.at/count.js"
       />
     </>
   );
