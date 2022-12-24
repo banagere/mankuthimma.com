@@ -20,11 +20,12 @@ function Articles(post: Post) {
   return (
     <>
       <ul>
-        <li className="grid grid-cols-4 gap-16 text-lg">
-          <Link href={`${post.url}`}>
-            <a className="col-span-3 font-medium hover:text-gold-500 dark:text-white-100">
-              {post.title}
-            </a>
+        <li className="flex justify-between text-lg">
+          <Link
+            href={`${post.url}`}
+            className="font-medium hover:text-gold-500 dark:text-white-100"
+          >
+            {post.title}
           </Link>
 
           <text className="w-24 tracking-widest text-center text-gold-500">

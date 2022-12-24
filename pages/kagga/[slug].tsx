@@ -30,7 +30,7 @@ const PostLayout = ({ post }) => {
       </Head>
 
       <div className="max-w-2xl px-4 mx-auto">
-        <button className="px-2 py-[3px] font-semibold rounded-md text-white-100 hover:from-gold-500 hover:to-gold-700 from-gold-500 via-gold-600 to-gold-700 bg-gradient-to-br shadow-md">
+        <button className="px-2 py-1 font-semibold rounded-md shadow-md text-white-100 hover:from-gold-500 hover:to-gold-700 from-gold-500 via-gold-600 to-gold-700 bg-gradient-to-br">
           <Link href="/">← Home</Link>
         </button>
 

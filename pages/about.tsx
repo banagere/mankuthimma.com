@@ -42,8 +42,8 @@ export default function About() {
         </p>
         <hr />
         <p>
-          500+ unique visitors come to this site. If would be of great help if
-          you'd offer assistance by{" "}
+          500+ unique visitors come to this site every month. If would be of
+          great help if you could lend a hand keeping this site alive by{" "}
           <a
             href="https://www.buymeacoffee.com/banagere"
             rel="noreferrer noopener"
