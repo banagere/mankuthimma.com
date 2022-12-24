@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
+import { PostMetrics } from "ui/PostMetrics";
 
 export async function getStaticPaths() {
   const paths = allPosts.map((post) => post.url);
@@ -40,6 +41,9 @@ const PostLayout = ({ post }) => {
           </h1>
           <p className="text-lg font-semibold tracking-wider text-gold-500">
             {post.number}
+          </p>
+          <p className="font-medium text-gold-500">
+            <PostMetrics slug={post.slug} />
           </p>
         </div>
 
