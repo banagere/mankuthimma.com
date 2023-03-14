@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Script from "next/script";
 
 export default function Main() {
   return (
@@ -71,13 +70,6 @@ export default function Main() {
           media="(prefers-color-scheme: dark)"
         />
       </Head>
-
-      {/* Goatcounter Script */}
-      <Script
-        data-goatcounter="https://mankuthimma.goatcounter.com/count"
-        async
-        src="//gc.zgo.at/count.js"
-      />
     </>
   );
 }

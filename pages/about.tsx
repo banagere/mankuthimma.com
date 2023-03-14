@@ -28,7 +28,7 @@ export default function About() {
           Mankuthimmana Kagga fascinated me the first time I read it at school.
           I found it difficult to share a snippet and had to dig the internet. I
           created this repository for people to access this easily, this gem
-          mustn’t be hidden.
+          mustn't be hidden.
         </p>
         <p>
           I used books and websites to organise this site. I give all credit to
@@ -44,14 +44,6 @@ export default function About() {
         <p>
           500+ unique visitors come to this site every month. If would be of
           great help if you could lend a hand keeping this site alive by{" "}
-          <a
-            href="https://www.buymeacoffee.com/banagere"
-            rel="noreferrer noopener"
-            target={"_blank"}
-          >
-            Buying me a Coffee
-          </a>
-          {" or "}
           <a
             href="https://github.com/banagere/mankuthimma.com"
             rel="noreferrer noopener"

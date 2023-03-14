@@ -35,6 +35,8 @@ const Layout = ({ children }: Props) => {
             <Link
               href="https://github.com/banagere/mankuthimma.com"
               className="font-medium text-black-100 hover:text-gold-500 dark:text-gray-300"
+              rel="noreferrer noopener"
+              target={"_blank"}
             >
               Github
             </Link>
