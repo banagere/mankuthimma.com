@@ -9,7 +9,6 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <div className="flex flex-col h-screen">
-        <Main />
 
         <header className="py-8 text-center">
           <Link
@@ -23,7 +22,6 @@ const Layout = ({ children }: Props) => {
         <main className="flex-grow">{children}</main>
 
         <footer className="py-8 mx-auto">
-          {/* <hr className="w-56 mx-auto border border-gold-300 dark:border-gold-500" /> */}
           <div className="pt-3 text-center text-black-100 dark:text-gray-300">
             <Link
               href="/about"
