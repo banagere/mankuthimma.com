@@ -3,6 +3,8 @@ import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
 import { useMDXComponent } from "next-contentlayer/hooks";
 import { PostMetrics } from "ui/PostMetrics";
+import { NextSeo } from "next-seo";
+import * as config from "@/src/seo/index";
 
 export async function getStaticPaths() {
   const paths = allPosts.map((post) => post.url);
@@ -26,9 +28,21 @@ const PostLayout = ({ post }) => {
 
   return (
     <>
-      <Head>
-        <title>{post.title}</title>
-      </Head>
+      <NextSeo
+        title={`Kagga | ${post.title}`}
+        canonical={`${config.baseUrl}/kagga/${post.slug}`}
+        openGraph={{
+          title: `Kagga | ${post.title}`,
+          url: `${config.baseUrl}/kagga/${post.slug}`,
+          type: "article",
+          article: {
+            authors: [config.authorName],
+          },
+        }}
+        twitter={{
+          cardType: "summary_large_image",
+        }}
+      />
 
       <div className="max-w-2xl px-4 mx-auto">
         <button className="px-2 py-1 font-semibold rounded-md shadow-md text-white-100 hover:from-gold-500 hover:to-gold-700 from-gold-500 via-gold-600 to-gold-700 bg-gradient-to-br">
