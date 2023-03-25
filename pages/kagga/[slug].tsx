@@ -41,8 +41,6 @@ const PostLayout = ({ post }) => {
           </h1>
           <p className="text-lg font-semibold tracking-wider text-gold-500">
             {post.number}
-          </p>
-          <p className="font-medium text-gold-500">
             <PostMetrics slug={post.slug} />
           </p>
         </div>
