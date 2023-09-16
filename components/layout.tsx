@@ -1,48 +1,50 @@
 import Link from "next/link";
-import Main from "./Head";
 
+// Type definitions
 interface Props {
   children?: React.ReactNode;
 }
 
-const Layout = ({ children }: Props) => {
-  return (
-    <>
-      <div className="flex flex-col h-screen">
+// Constants for class names
+const headerClassName =
+  "text-2xl font-medium my-9 hover:text-gold-500 dark:text-white-100";
+const footerLinkClassName =
+  "font-medium text-black-100 hover:text-gold-500 dark:text-gray-300";
 
-        <header className="py-8 text-center">
-          <Link
-            href="/"
-            className="text-2xl font-medium my-9 hover:text-gold-500 dark:text-white-100"
-          >
-            Mankuthimmana Kagga
+// Layout component that includes header, main content, and footer
+const Layout: React.FC<Props> = ({ children }) => (
+  <>
+    <div className="flex flex-col h-screen">
+      {/* Header Section */}
+      <header className="py-8 text-center">
+        <Link href="/" className={headerClassName}>
+          Mankuthimmana Kagga
+        </Link>
+      </header>
+
+      {/* Main Content */}
+      <main className="flex-grow">{children}</main>
+
+      {/* Footer Section */}
+      <footer className="py-8 mx-auto">
+        <div className="pt-3 text-center text-black-100 dark:text-gray-300">
+          <Link href="/about" className={footerLinkClassName}>
+            About
           </Link>
-        </header>
-
-        <main className="flex-grow">{children}</main>
-
-        <footer className="py-8 mx-auto">
-          <div className="pt-3 text-center text-black-100 dark:text-gray-300">
-            <Link
-              href="/about"
-              className="font-medium text-black-100 hover:text-gold-500 dark:text-gray-300"
-            >
-              About
-            </Link>
-            {" • "}
-            <Link
-              href="https://github.com/banagere/mankuthimma.com"
-              className="font-medium text-black-100 hover:text-gold-500 dark:text-gray-300"
-              rel="noreferrer noopener"
-              target={"_blank"}
-            >
-              Github
-            </Link>
-          </div>
-        </footer>
-      </div>
-    </>
-  );
-};
+          {" • "}
+          <Link
+            href="https://github.com/banagere/mankuthimma.com"
+            className={footerLinkClassName}
+            rel="noreferrer noopener"
+            target="_blank"
+            aria-label="Github (opens in a new tab)"
+          >
+            Github
+          </Link>
+        </div>
+      </footer>
+    </div>
+  </>
+);
 
 export default Layout;

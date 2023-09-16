@@ -28,7 +28,7 @@ export async function getStaticProps({ params }) {
 
 // Helper component for the Back to Home button
 const BackToHomeButton = () => (
-  <button className="px-2 py-1 font-semibold rounded-md shadow-md text-white-100 hover:from-gold-500 hover:to-gold-700 from-gold-500 via-gold-600 to-gold-700 bg-gradient-to-br">
+  <button className="px-2 py-1 font-medium duration-300 rounded-full shadow hover:shadow-md text-white-100 hover:from-gold-500 hover:to-gold-700 from-gold-500 via-gold-600 to-gold-700 bg-gradient-to-br">
     <Link href="/">← Home</Link>
   </button>
 );
