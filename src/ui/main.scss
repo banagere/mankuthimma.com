@@ -10,9 +10,3 @@
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
-
-@layer base {
-  html {
-    @apply bg-white max-w-2xl mx-auto px-4 dark:bg-black-100;
-  }
-}

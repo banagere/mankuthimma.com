@@ -9,6 +9,8 @@ import { allPosts } from "contentlayer/generated";
 import { PostMetrics } from "ui/PostMetrics";
 import * as config from "@/src/seo/index";
 import { notFound } from "next/navigation";
+import { Mdx } from "components/mdx";
+import { Metadata } from "next";
 
 // Function to find a post by its slug
 const findPostBySlug = (slug) => allPosts.find((post) => post.slug === slug);
@@ -22,29 +24,27 @@ export default async function Kagga({ params }) {
   }
 
   return (
-    <div className="max-w-2xl px-4 mx-auto">
+    <div className="max-w-2xl mx-auto">
       <BackToHomeButton />
 
       <div>
-        <h1 className="mt-5 text-3xl font-bold dark:text-white-100">
+        <h1 className="mt-5 text-2xl font-semibold dark:text-white-100">
           {post.title}
         </h1>
-        <p className="text-lg font-semibold tracking-wider text-gold-500">
+        <p className="font-semibold tracking-wider text-gold-500">
           {post.number}
           {/* <PostMetrics slug={post.slug} /> */}
         </p>
       </div>
 
-      <article className="pt-5 prose dark:prose-invert prose-h1:text-2xl prose-h2:text-3xl prose-h2:text-gold-500 prose-h3:text-lg prose-h3:text-gold-500 prose-h3:mt-2 prose-headings:mb-1 prose-img:rounded-md">
-        {/* <MDXContent /> */}
-      </article>
+      <Mdx code={post.body.code} />
     </div>
   );
 }
 
 // Helper component for the Back to Home button
 const BackToHomeButton = () => (
-  <button className="px-2 py-1 font-medium duration-300 rounded-full shadow hover:shadow-md text-white-100 hover:from-gold-500 hover:to-gold-700 from-gold-500 via-gold-600 to-gold-700 bg-gradient-to-br">
+  <button className="px-2 py-1 font-medium rounded-full shadow duration-400 hover:shadow-md text-white-100 hover:from-gold-500 hover:to-gold-700 from-gold-500 via-gold-600 to-gold-700 bg-gradient-to-br">
     <Link href="/">← Home</Link>
   </button>
 );
@@ -76,3 +76,32 @@ const PostLayout = ({ post }) => {
     </>
   );
 };
+
+// Function to generate metadata for the page
+export async function generateMetadata({
+  params,
+}): Promise<Metadata | undefined> {
+  const post = findPostBySlug(params.slug);
+
+  if (!post) {
+    return;
+  }
+
+  return {
+    title: post.title,
+    // description: post.excerpt,
+    openGraph: {
+      title: post.title,
+      // description: post.excerpt,
+      type: "article",
+      // publishedTime: post.date,
+      url: `${config.baseUrl}/note/${post.slug}`,
+      authors: config.authorName,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      // description: post.excerpt,
+    },
+  };
+}

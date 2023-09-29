@@ -9,18 +9,19 @@ interface RootLayoutProps {
 }
 
 // Constants for class names
-const headerClassName =
-  "text-2xl font-medium my-9 hover:text-gold-500 dark:text-white-100";
 const footerLinkClassName =
   "font-medium text-black-100 hover:text-gold-500 dark:text-gray-300";
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className="flex flex-col h-screen">
+      <body className="flex flex-col h-screen max-w-xl px-4 mx-auto bg-white dark:bg-black-100">
         {/* Header Section */}
-        <header className="py-8 text-center">
-          <Link href="/" className={headerClassName}>
+        <header className="mt-6 mb-3 border-b-2 border-gold-300">
+          <Link
+            href="/"
+            className="text-2xl font-semibold hover:text-gold-500 dark:text-white-100"
+          >
             Mankuthimmana Kagga
           </Link>
         </header>
@@ -53,3 +54,45 @@ export default function RootLayout({ children }: RootLayoutProps) {
     </html>
   );
 }
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://mankuthimma.com"),
+  title: {
+    default: "Mankuthimmana Kagga",
+    template: "%s",
+  },
+  // description: "Musician, Writer and Developer!",
+  openGraph: {
+    title: "Mankuthimmana Kagga",
+    // description: "Musician, Writer and Developer!",
+    url: "https://mankuthimma.com",
+    siteName: "Mankuthimmana Kagga",
+    images: [
+      {
+        url: "https://mankuthimma.com/images/share-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en-IN",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  twitter: {
+    title: "Mankuthimmana Kagga",
+    card: "summary_large_image",
+  },
+  icons: {
+    shortcut: "https://mankuthimma.com/favicons/favicon.ico",
+  },
+};
