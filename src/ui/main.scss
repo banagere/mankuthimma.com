@@ -11,8 +11,42 @@
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-@layer base {
-  html {
-    @apply bg-white max-w-2xl mx-auto px-4 dark:bg-black-100;
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbbda4;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b8a383;
+}
+
+* {
+  scrollbar-width: inherit;
+  scrollbar-color: #b8a383 #f1f1f1;
+}
+
+/* Custom Scrollbar Styles for Dark mode */
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #181818;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #8c795d;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #776750;
+  }
+
+  * {
+    scrollbar-width: inherit;
+    scrollbar-color: #776750 #181818;
   }
 }
