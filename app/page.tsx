@@ -25,14 +25,16 @@ export default function Index() {
 
       <ul className="flex flex-col">
         {sortedPosts?.map((post) => (
-          <li className="flex justify-between" key={post.url}>
+          <li className="flex items-baseline justify-between" key={post.url}>
             <Link
               href={post.url}
               className="font-medium hover:text-gold-500 dark:text-white-100"
             >
               {post.title}
             </Link>
-            <p className="tracking-wider text-gold-500">{post.number}</p>
+            <p className="text-sm tracking-wider text-gold-500">
+              {post.number}
+            </p>
           </li>
         ))}
       </ul>

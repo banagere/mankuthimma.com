@@ -58,7 +58,7 @@ const PostLayout = ({ post }) => {
     <>
       <NextSeo {...seoConfig} />
 
-      <div className="max-w-2xl px-4 mx-auto">
+      {/* <div className="max-w-2xl px-4 mx-auto">
         <BackToHomeButton />
 
         <div>
@@ -74,7 +74,7 @@ const PostLayout = ({ post }) => {
         <article className="pt-5 prose dark:prose-invert prose-h1:text-2xl prose-h2:text-3xl prose-h2:text-gold-500 prose-h3:text-lg prose-h3:text-gold-500 prose-h3:mt-2 prose-headings:mb-1 prose-img:rounded-md">
           <MDXContent />
         </article>
-      </div>
+      </div> */}
     </>
   );
 };

@@ -15,26 +15,16 @@ const footerLinkClassName =
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className="flex flex-col h-screen max-w-xl px-4 mx-auto bg-white dark:bg-black-100">
+      <body className="flex flex-col h-screen max-w-xl px-5 mx-auto bg-white dark:bg-black-100">
         {/* Header Section */}
-        <header className="mt-6 mb-3 border-b-2 border-gold-300">
+        <header className="flex justify-between mt-5 mb-3 border-b-2 border-gold-300">
           <Link
             href="/"
             className="text-2xl font-semibold hover:text-gold-500 dark:text-white-100"
           >
             Mankuthimmana Kagga
           </Link>
-        </header>
-
-        {/* Main Content */}
-        <main className="flex-grow">
-          {children}
-          <Analytics />
-        </main>
-
-        {/* Footer Section */}
-        <footer className="py-8 mx-auto">
-          <div className="pt-3 text-center text-black-100 dark:text-gray-300">
+          <div className="pt-2 text-sm text-black-100 dark:text-gray-300">
             <Link href="/about" className={footerLinkClassName}>
               About
             </Link>
@@ -49,6 +39,31 @@ export default function RootLayout({ children }: RootLayoutProps) {
               Github
             </Link>
           </div>
+        </header>
+
+        {/* Main Content */}
+        <main className="flex-grow pb-5">
+          {children}
+          <Analytics />
+        </main>
+
+        {/* Footer Section */}
+        <footer className="py-5 mx-auto">
+          {/* <div className="pt-3 text-sm text-center text-black-100 dark:text-gray-300">
+            <Link href="/about" className={footerLinkClassName}>
+              About
+            </Link>
+            {" • "}
+            <Link
+              href="https://github.com/banagere/mankuthimma.com"
+              className={footerLinkClassName}
+              rel="noreferrer noopener"
+              target="_blank"
+              aria-label="Github (opens in a new tab)"
+            >
+              Github
+            </Link>
+          </div> */}
         </footer>
       </body>
     </html>
