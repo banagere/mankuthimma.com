@@ -15,29 +15,26 @@ const footerLinkClassName =
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
+      <head>
+        {/* safari tab colour https://www.amitmerchant.com/get-your-website-ready-tab-bar-theming-of-safari-15/ */}
+        <meta
+          name="theme-color"
+          content="#F8F8F8"
+          media="(prefers-color-scheme: light)"
+        />
+        <meta
+          name="theme-color"
+          content="#202022"
+          media="(prefers-color-scheme: dark)"
+        />
+
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
+        <meta name="robots" content="index, follow" />
+      </head>
+
       <body className="flex flex-col h-screen max-w-2xl px-5 mx-auto bg-white dark:bg-black-100">
-        <head>
-          {/* safari tab colour https://www.amitmerchant.com/get-your-website-ready-tab-bar-theming-of-safari-15/ */}
-          <meta
-            name="theme-color"
-            content="#F8F8F8"
-            media="(prefers-color-scheme: light)"
-          />
-          <meta
-            name="theme-color"
-            content="#202022"
-            media="(prefers-color-scheme: dark)"
-          />
-
-          <meta charSet="utf-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-          <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
-          <meta name="robots" content="index, follow" />
-        </head>
-
         {/* Header Section */}
         <header className="flex justify-between mb-3 border-b-2 mt-7 border-gold-300">
           <Link
