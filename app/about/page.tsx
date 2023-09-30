@@ -15,7 +15,7 @@ export default function About() {
     <>
       <title>About</title>
 
-      <div className="mx-auto prose dark:prose-invert prose-headings:text-center prose-h1:text-2xl prose-hr:my-4 prose-hr:border-gray-400">
+      <div className="prose dark:prose-invert prose-headings:text-center prose-h1:text-xl prose-hr:my-4 prose-hr:border-gold-400">
         <h1>About</h1>
         <p>
           Mankuthimmana Kagga, written by Devanahalli Venkataramanaiah Gundappa
@@ -52,6 +52,18 @@ export default function About() {
           authors!
         </p>
         <hr />
+        <p>
+          This website is public. If you'd like to check the source code, visit{" "}
+          <a
+            href="https://github.com/banagere/mankuthimma.com"
+            rel="noreferrer noopener"
+            target="_blank"
+            aria-label="Github (opens in a new tab)"
+          >
+            Github
+          </a>
+          .
+        </p>
         <p>
           500+ unique visitors come to this site every month. If would be of
           great help if you could lend a hand keeping this site alive by{" "}

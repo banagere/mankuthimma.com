@@ -47,7 +47,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <Link href="/about" className={footerLinkClassName}>
               About
             </Link>
-            {" • "}
+            {/* {" • "}
             <Link
               href="https://github.com/banagere/mankuthimma.com"
               className={footerLinkClassName}
@@ -56,6 +56,16 @@ export default function RootLayout({ children }: RootLayoutProps) {
               aria-label="Github (opens in a new tab)"
             >
               Github
+            </Link> */}
+            {" • "}
+            <Link
+              href={"https://twitter.com/Kagga_BOT"}
+              className={footerLinkClassName}
+              rel="noreferrer noopener"
+              target="_blank"
+              aria-label="Twitter (opens in a new tab)"
+            >
+              Twitter
             </Link>
           </div>
         </header>
