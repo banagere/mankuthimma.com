@@ -64,7 +64,7 @@ export default function About() {
           </a>
           .
         </p>
-        <p>
+        {/* <p>
           500+ unique visitors come to this site every month. If would be of
           great help if you could lend a hand keeping this site alive by{" "}
           <a
@@ -75,7 +75,7 @@ export default function About() {
             Sponsoring on Github
           </a>
           .
-        </p>
+        </p> */}
       </div>
     </>
   );
