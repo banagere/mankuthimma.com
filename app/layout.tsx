@@ -34,29 +34,19 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta name="robots" content="index, follow" />
       </head>
 
-      <body className="flex flex-col h-screen max-w-2xl px-5 mx-auto bg-white dark:bg-black-100">
+      <body className="flex flex-col h-screen max-w-5xl px-5 mx-auto bg-white dark:bg-black-100">
         {/* Header Section */}
         <header className="flex justify-between mb-3 border-b-2 mt-7 border-gold-300">
           <Link
             href="/"
-            className="text-xl font-semibold hover:text-gold-500 dark:text-white-100"
+            className="text-2xl font-medium hover:text-gold-500 dark:text-white-100"
           >
             Mankuthimmana Kagga
           </Link>
-          <div className="pt-2 text-sm text-black-100 dark:text-gray-300">
+          <div className="pt-2 text-black-100 dark:text-gray-300">
             <Link href="/about" className={footerLinkClassName}>
               About
             </Link>
-            {/* {" • "}
-            <Link
-              href="https://github.com/banagere/mankuthimma.com"
-              className={footerLinkClassName}
-              rel="noreferrer noopener"
-              target="_blank"
-              aria-label="Github (opens in a new tab)"
-            >
-              Github
-            </Link> */}
             {" • "}
             <Link
               href={"https://twitter.com/Kagga_BOT"}
@@ -77,7 +67,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         </main>
 
         {/* Footer Section */}
-        <footer className="py-5 mx-auto">
+        <footer className="py-3">
           {/* <div className="pt-3 text-sm text-center text-black-100 dark:text-gray-300">
             <Link href="/about" className={footerLinkClassName}>
               About
