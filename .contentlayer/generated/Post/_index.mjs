@@ -7,7 +7,7 @@ import beingAwarenessBlissMdx from './being,-awareness,-bliss.mdx.json' assert {
 import brahmanChameleonMdx from './brahman-chameleon.mdx.json' assert { type: 'json' }
 import brahmanIsAHouseholderMdx from './brahman-is-a-householder.mdx.json' assert { type: 'json' }
 import brahmanIsLifeMdx from './brahman-is-life.mdx.json' assert { type: 'json' }
-import brahmanIsMilkCreationIsFrothMdx from './brahman-is-milk,-creation-is-froth.mdx.json' assert { type: 'json' }
+import brahmanIsMilkCreationIsFrothMdx from './brahman-is-milk-creation-is-froth.mdx.json' assert { type: 'json' }
 import centerOfTheUniverseMdx from './center-of-the-universe.mdx.json' assert { type: 'json' }
 import churningOfWorldAndLifeMdx from './churning-of-world-and-life.mdx.json' assert { type: 'json' }
 import companyOfTheWorldMdx from './company-of-the-world.mdx.json' assert { type: 'json' }
@@ -56,7 +56,7 @@ import natureIsEternalCultivationMdx from './nature-is-eternal-cultivation.mdx.j
 import naturesSchemeOfFluidsMdx from './natures-scheme-of-fluids.mdx.json' assert { type: 'json' }
 import peoplesVoiceInCreationMdx from './peoples-voice-in-creation.mdx.json' assert { type: 'json' }
 import playingCardsMdx from './playing-cards.mdx.json' assert { type: 'json' }
-import problemResolutionMdx from './problem,-resolution.mdx.json' assert { type: 'json' }
+import problemResolutionMdx from './problem-resolution.mdx.json' assert { type: 'json' }
 import punishmentOfNaturalnessMdx from './punishment-of-naturalness.mdx.json' assert { type: 'json' }
 import scientistMdx from './scientist.mdx.json' assert { type: 'json' }
 import selfExpansionMdx from './self-expansion.mdx.json' assert { type: 'json' }

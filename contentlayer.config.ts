@@ -12,6 +12,7 @@ const computedFields: ComputedFields = {
   url: {
     type: "string",
     resolve: (doc) => `/kagga/${doc._raw.flattenedPath}`,
+    //   resolve: (doc) => doc._raw.sourceFileName.replace(/\.mdx$/, ""),
   },
 };
 
@@ -33,16 +34,16 @@ export default makeSource({
   documentTypes: [Post],
   mdx: {
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [
-      rehypeSlug,
-      // [
-      //   rehypeAutolinkHeadings,
-      //   {
-      //     properties: {
-      //       className: ["anchor"],
-      //     },
-      //   },
-      // ],
-    ],
+    // rehypePlugins: [
+    //   rehypeSlug,
+    //   [
+    //     rehypeAutolinkHeadings,
+    //     {
+    //       properties: {
+    //         className: ["anchor"],
+    //       },
+    //     },
+    //   ],
+    // ],
   },
 });
