@@ -24,20 +24,24 @@ export default async function Kagga({ params }) {
   }
 
   return (
-    <div className="max-w-xl mx-auto">
-      <div className="relative mt-2">
+    <>
+      <div className="">
         <BackToHomeButton />
-        <h1 className="text-2xl font-semibold dark:text-white-100">
-          {post.title}
-        </h1>
-        <p className="font-semibold tracking-wider text-gold-500">
-          {post.number}
-          {/* <PostMetrics slug={post.slug} /> */}
-        </p>
-      </div>
+        <div className="max-w-xl mx-auto text-center">
+          <div className="relative mt-2">
+            <h1 className="text-2xl font-semibold dark:text-white-100">
+              {post.title}
+            </h1>
+            <p className="font-semibold tracking-wider text-gold-500">
+              {post.number}
+              {/* <PostMetrics slug={post.slug} /> */}
+            </p>
+          </div>
 
-      <Mdx code={post.body.code} />
-    </div>
+          <Mdx code={post.body.code} />
+        </div>
+      </div>
+    </>
   );
 }
 
@@ -46,7 +50,10 @@ const BackToHomeButton = () => (
   // <button className="px-2 py-1 text-sm font-medium rounded-full shadow duration-400 hover:shadow-md text-white-100 hover:from-gold-500 hover:to-gold-700 from-gold-500 via-gold-600 to-gold-700 bg-gradient-to-br">
   //   <Link href="/">← Home</Link>
   // </button>
-  <button className="px-2 py-1 mb-2 text-sm font-medium text-white duration-500 rounded-full shadow md:mb-0 md:absolute md:-ml-24 hover:shadow-md bg-gold-600 hover:bg-opacity-80">
+  // <button className="px-2 py-1 mb-2 text-sm font-medium text-white duration-500 rounded-full shadow md:mb-0 md:absolute md:-ml-24 hover:shadow-md bg-gold-600 hover:bg-opacity-80">
+  //   <Link href="/">← Home</Link>
+  // </button>
+  <button className="px-2 py-1 mb-2 text-sm font-medium text-white duration-500 rounded-full shadow md:mb-0 md:absolute hover:shadow-md bg-gold-600 hover:bg-opacity-80">
     <Link href="/">← Home</Link>
   </button>
 );
