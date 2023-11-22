@@ -60,30 +60,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
           </div>
         </header>
 
-        {/* Main Content */}
         <main className="flex-grow pb-5">
           {children}
           <Analytics />
         </main>
 
-        {/* Footer Section */}
-        <footer className="py-3">
-          {/* <div className="pt-3 text-sm text-center text-black-100 dark:text-gray-300">
-            <Link href="/about" className={footerLinkClassName}>
-              About
-            </Link>
-            {" • "}
-            <Link
-              href="https://github.com/banagere/mankuthimma.com"
-              className={footerLinkClassName}
-              rel="noreferrer noopener"
-              target="_blank"
-              aria-label="Github (opens in a new tab)"
-            >
-              Github
-            </Link>
-          </div> */}
-        </footer>
+        <footer className="py-3"></footer>
       </body>
     </html>
   );

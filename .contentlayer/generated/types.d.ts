@@ -16,10 +16,9 @@ export type Post = {
   title: string
   weight: number
   number: string
-  slug?: string | undefined
   /** MDX file body */
   body: MDX
-  url: string
+  slug: string
 }  
 
 /** Nested types */
