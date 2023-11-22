@@ -35,14 +35,14 @@ export default makeSource({
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
       rehypeSlug,
-      [
-        rehypeAutolinkHeadings,
-        {
-          properties: {
-            className: ["anchor"],
-          },
-        },
-      ],
+      // [
+      //   rehypeAutolinkHeadings,
+      //   {
+      //     properties: {
+      //       className: ["anchor"],
+      //     },
+      //   },
+      // ],
     ],
   },
 });

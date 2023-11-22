@@ -1,11 +1,10 @@
 .prose .anchor {
-  @apply absolute invisible no-underline;
+  @apply absolute invisible no-underline cursor-pointer w-4/5 ml-4 pr-2 max-w-2xl;
 
-  margin-left: -1em;
-  padding-right: 0.5em;
-  width: 80%;
-  max-width: 700px;
-  cursor: pointer;
+  // margin-left: -1em;
+  // padding-right: 0.5em;
+  // width: 80%;
+  // max-width: 700px;
 }
 
 .anchor:hover {
