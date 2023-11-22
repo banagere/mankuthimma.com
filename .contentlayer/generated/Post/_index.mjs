@@ -3,7 +3,7 @@
 import aNewDesireEveryMomentMdx from './a-new-desire-every-moment.mdx.json' assert { type: 'json' }
 import aridMenanceMdx from './arid-menance.mdx.json' assert { type: 'json' }
 import artificialComesFromNaturalMdx from './artificial-comes-from-natural.mdx.json' assert { type: 'json' }
-import beingAwarenessBlissMdx from './being,-awareness,-bliss.mdx.json' assert { type: 'json' }
+import beingAwarenessBlissMdx from './being-awareness-bliss.mdx.json' assert { type: 'json' }
 import brahmanChameleonMdx from './brahman-chameleon.mdx.json' assert { type: 'json' }
 import brahmanIsAHouseholderMdx from './brahman-is-a-householder.mdx.json' assert { type: 'json' }
 import brahmanIsLifeMdx from './brahman-is-life.mdx.json' assert { type: 'json' }
@@ -14,7 +14,7 @@ import companyOfTheWorldMdx from './company-of-the-world.mdx.json' assert { type
 import completeVisionMdx from './complete-vision.mdx.json' assert { type: 'json' }
 import cosmicDebtMdx from './cosmic-debt.mdx.json' assert { type: 'json' }
 import cosmicDramaMdx from './cosmic-drama.mdx.json' assert { type: 'json' }
-import cravingIsTheMotherOpportunityIsTheFatherMdx from './craving-is-the-mother,-opportunity-is-the-father.mdx.json' assert { type: 'json' }
+import cravingIsTheMotherOpportunityIsTheFatherMdx from './craving-is-the-mother-opportunity-is-the-father.mdx.json' assert { type: 'json' }
 import creatorOrImpMdx from './creator-or-imp.mdx.json' assert { type: 'json' }
 import critiqueWithAwarenessMdx from './critique-with-awareness.mdx.json' assert { type: 'json' }
 import energyFlowMdx from './energy-flow.mdx.json' assert { type: 'json' }
@@ -23,10 +23,10 @@ import essenseOfProgressMdx from './essense-of-progress.mdx.json' assert { type:
 import eternalDharmaOfLifeMdx from './eternal-dharma-of-life.mdx.json' assert { type: 'json' }
 import expansionContractionMdx from './expansion-contraction.mdx.json' assert { type: 'json' }
 import explosionOfTruthMdx from './explosion-of-truth.mdx.json' assert { type: 'json' }
-import foreverAncientForeverNewMdx from './forever-ancient,-forever-new.mdx.json' assert { type: 'json' }
+import foreverAncientForeverNewMdx from './forever-ancient-forever-new.mdx.json' assert { type: 'json' }
 import forgivenessMdx from './forgiveness.mdx.json' assert { type: 'json' }
 import fourFacesMdx from './four-faces.mdx.json' assert { type: 'json' }
-import foxMonkeyHumanMdx from './fox,-monkey,-human.mdx.json' assert { type: 'json' }
+import foxMonkeyHumanMdx from './fox-monkey-human.mdx.json' assert { type: 'json' }
 import gardenOfBrahmanMdx from './garden-of-brahman.mdx.json' assert { type: 'json' }
 import goodAndEvilMdx from './good-and-evil.mdx.json' assert { type: 'json' }
 import handSketchOfFateMdx from './hand-sketch-of-fate.mdx.json' assert { type: 'json' }
@@ -35,9 +35,9 @@ import humansOrDemonsMdx from './humans-or-demons.mdx.json' assert { type: 'json
 import hundredStringDanceMdx from './hundred-string-dance.mdx.json' assert { type: 'json' }
 import illusionOfComfortMdx from './illusion-of-comfort.mdx.json' assert { type: 'json' }
 import illusoryLightMdx from './illusory-light.mdx.json' assert { type: 'json' }
-import inanimateAnimateMdx from './inanimate,-animate.mdx.json' assert { type: 'json' }
+import inanimateAnimateMdx from './inanimate-animate.mdx.json' assert { type: 'json' }
 import indestructibleUniverseMdx from './indestructible-universe.mdx.json' assert { type: 'json' }
-import infiniteFrameFinitePictureMdx from './infinite-frame,-finite-picture.mdx.json' assert { type: 'json' }
+import infiniteFrameFinitePictureMdx from './infinite-frame-finite-picture.mdx.json' assert { type: 'json' }
 import innerExperienceMdx from './inner-experience.mdx.json' assert { type: 'json' }
 import innerVisionMdx from './inner-vision.mdx.json' assert { type: 'json' }
 import invisibleSchemeMdx from './invisible-scheme.mdx.json' assert { type: 'json' }
