@@ -34,16 +34,16 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta name="robots" content="index, follow" />
       </head>
 
-      <body className="flex flex-col h-screen max-w-5xl px-5 mx-auto bg-white dark:bg-black-100">
+      <body className="flex flex-col max-w-5xl px-5 mx-auto bg-white dark:bg-black-100">
         {/* Header Section */}
         <header className="flex justify-between mb-3 border-b-2 mt-7 border-gold-300">
           <Link
             href="/"
-            className="text-2xl font-medium hover:text-gold-500 dark:text-white-100"
+            className="text-xl font-medium md:text-2xl hover:text-gold-500 dark:text-white-100"
           >
             Mankuthimmana Kagga
           </Link>
-          <div className="pt-2 text-black-100 dark:text-gray-300">
+          <div className="pt-1 md:pt-2 text-black-100 dark:text-gray-300">
             <Link href="/about" className={footerLinkClassName}>
               About
             </Link>
@@ -60,12 +60,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
           </div>
         </header>
 
-        <main className="flex-grow pb-5">
+        <main className="">
           {children}
           <Analytics />
         </main>
 
-        <footer className="py-3"></footer>
+        <footer className="py-5"></footer>
       </body>
     </html>
   );
