@@ -1,3 +1,4 @@
+"use client";
 import useSWR, { SWRConfiguration } from "swr";
 
 const API_URL = `/api/views`;

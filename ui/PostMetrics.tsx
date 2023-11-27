@@ -1,3 +1,5 @@
+"use client";
+
 /* eslint-disable react-hooks/exhaustive-deps */
 import { usePostViews } from "components/usePostViews";
 import React from "react";

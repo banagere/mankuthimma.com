@@ -34,7 +34,7 @@ export default async function Kagga({ params }) {
             </h1>
             <p className="font-semibold tracking-wider text-gold-500">
               {post.number}
-              {/* <PostMetrics slug={post.slug} /> */}
+              <PostMetrics slug={post.slug} />
             </p>
           </div>
 
@@ -45,14 +45,7 @@ export default async function Kagga({ params }) {
   );
 }
 
-// Helper component for the Back to Home button
 const BackToHomeButton = () => (
-  // <button className="px-2 py-1 text-sm font-medium rounded-full shadow duration-400 hover:shadow-md text-white-100 hover:from-gold-500 hover:to-gold-700 from-gold-500 via-gold-600 to-gold-700 bg-gradient-to-br">
-  //   <Link href="/">← Home</Link>
-  // </button>
-  // <button className="px-2 py-1 mb-2 text-sm font-medium text-white duration-500 rounded-full shadow md:mb-0 md:absolute md:-ml-24 hover:shadow-md bg-gold-600 hover:bg-opacity-80">
-  //   <Link href="/">← Home</Link>
-  // </button>
   <button className="px-2 py-1 mb-2 text-sm font-medium text-white duration-500 rounded-full shadow md:mb-0 md:absolute hover:shadow-md bg-gold-600 hover:bg-opacity-80">
     <Link href="/">← Home</Link>
   </button>
