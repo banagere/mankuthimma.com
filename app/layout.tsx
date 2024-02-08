@@ -1,5 +1,6 @@
-import { Analytics } from "@vercel/analytics/react";
 import "src/ui/main.scss";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <main className="">
           {children}
           <Analytics />
+          <SpeedInsights />
         </main>
 
         <footer className="py-5"></footer>
