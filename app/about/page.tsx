@@ -1,20 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
-// Helper function for paragraphs
-const Paragraph = ({ children }) => <p>{children}</p>;
+import Link from "next/link";
+import { Metadata } from "next";
 
-// Helper function for external links
-const ExternalLink = ({ href, children }) => (
-  <a href={href} rel="noreferrer noopener" target="_blank">
-    {children}
-  </a>
-);
-
-// About Component
 export default function About() {
   return (
     <>
-      <title>About</title>
-
       <div className="mx-auto prose text-center dark:prose-invert prose-headings:text-center prose-h1:text-xl prose-hr:my-4 prose-hr:border-gold-400">
         <h1>About</h1>
         <p>
@@ -54,14 +44,14 @@ export default function About() {
         <hr />
         <p>
           This website is public. If you'd like to check the source code, visit{" "}
-          <a
+          <Link
             href="https://github.com/banagere/mankuthimma.com"
             rel="noreferrer noopener"
             target="_blank"
             aria-label="Github (opens in a new tab)"
           >
             Github
-          </a>
+          </Link>
           .
         </p>
         {/* <p>
@@ -80,3 +70,13 @@ export default function About() {
     </>
   );
 }
+
+export const metadata: Metadata = {
+  title: {
+    default: "About",
+    template: "%s",
+  },
+  openGraph: {
+    title: "About",
+  },
+};

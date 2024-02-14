@@ -15,7 +15,7 @@ module.exports = {
 
   // Me info
   authorName: "Ravi Banagere",
-  authorEmail: "ravi@banagere.com",
+  authorEmail: "banagere.ravi@outlook.com",
   authorSocial: {
     github: "banagere",
     twitter: "banagere_",
