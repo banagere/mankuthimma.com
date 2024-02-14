@@ -1,10 +1,4 @@
-// External Libraries
-import Head from "next/head";
 import Link from "next/link";
-import { NextSeo } from "next-seo";
-import { useMDXComponent } from "next-contentlayer/hooks";
-
-// Internal Libraries
 import { allPosts } from "contentlayer/generated";
 import { PostMetrics } from "ui/PostMetrics";
 import * as config from "@/src/seo/index";
@@ -12,7 +6,6 @@ import { notFound } from "next/navigation";
 import { Mdx } from "components/mdx";
 import { Metadata } from "next";
 
-// Function to find a post by its slug
 const findPostBySlug = (slug) => allPosts.find((post) => post.slug === slug);
 
 export default async function Kagga({ params }) {
@@ -51,35 +44,6 @@ const BackToHomeButton = () => (
   </button>
 );
 
-// Main Post Layout
-const PostLayout = ({ post }) => {
-  const MDXContent = useMDXComponent(post.body.code);
-
-  // SEO Configuration
-  const seoConfig = {
-    title: `Kagga | ${post.title}`,
-    canonical: `${config.baseUrl}/kagga/${post.slug}`,
-    openGraph: {
-      title: `Kagga | ${post.title}`,
-      url: `${config.baseUrl}/kagga/${post.slug}`,
-      type: "article",
-      article: {
-        authors: [config.authorName],
-      },
-    },
-    twitter: {
-      cardType: "summary_large_image",
-    },
-  };
-
-  return (
-    <>
-      <NextSeo {...seoConfig} />
-    </>
-  );
-};
-
-// Function to generate metadata for the page
 export async function generateMetadata({
   params,
 }): Promise<Metadata | undefined> {
@@ -95,6 +59,7 @@ export async function generateMetadata({
       title: post.title,
       type: "article",
       url: `${config.baseUrl}/kagga/${post.slug}`,
+      authors: "Ravi Banagere",
     },
     twitter: {
       card: "summary_large_image",
