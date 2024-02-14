@@ -1,42 +1,34 @@
 import "src/ui/main.scss";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Metadata } from "next";
+import Head from "next/head";
 import Link from "next/link";
+import { Metadata } from "next";
 
-// Props type definition for RootLayout component
 interface RootLayoutProps {
   children: React.ReactNode;
 }
 
-// Constants for class names
 const footerLinkClassName =
   "font-medium text-black-100 hover:text-gold-500 dark:text-gray-300";
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <head>
-        {/* safari tab colour https://www.amitmerchant.com/get-your-website-ready-tab-bar-theming-of-safari-15/ */}
+      <Head>
         <meta
           name="theme-color"
-          content="#F8F8F8"
           media="(prefers-color-scheme: light)"
+          content="#F8F8F8"
         />
         <meta
           name="theme-color"
-          content="#202022"
           media="(prefers-color-scheme: dark)"
+          content="#202022"
         />
-
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
-        <meta name="robots" content="index, follow" />
-      </head>
+      </Head>
 
       <body className="flex flex-col max-w-5xl px-5 mx-auto bg-white dark:bg-black-100">
-        {/* Header Section */}
         <header className="flex justify-between mb-3 border-b-2 mt-7 border-gold-300">
           <Link
             href="/"
@@ -44,7 +36,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           >
             Mankuthimmana Kagga
           </Link>
-          <div className="pt-1 md:pt-2 text-black-100 dark:text-gray-300">
+          <nav className="pt-1 md:pt-2 text-black-100 dark:text-gray-300">
             <Link href="/about" className={footerLinkClassName}>
               About
             </Link>
@@ -58,16 +50,15 @@ export default function RootLayout({ children }: RootLayoutProps) {
             >
               Twitter
             </Link>
-          </div>
+          </nav>
         </header>
 
-        <main className="">
-          {children}
+        <main>{children}</main>
+
+        <footer className="py-5">
           <Analytics />
           <SpeedInsights />
-        </main>
-
-        <footer className="py-5"></footer>
+        </footer>
       </body>
     </html>
   );

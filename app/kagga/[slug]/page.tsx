@@ -6,30 +6,50 @@ import { notFound } from "next/navigation";
 import { Mdx } from "components/mdx";
 import { Metadata } from "next";
 
-const findPostBySlug = (slug) => allPosts.find((post) => post.slug === slug);
+const postsBySlug = new Map(allPosts.map((post) => [post.slug, post]));
 
 export default async function Kagga({ params }) {
-  const post = findPostBySlug(params?.slug);
+  const post = postsBySlug.get(params?.slug);
+  const allSlugs = Array.from(postsBySlug.keys()).sort((slugA, slugB) => {
+    const postA = postsBySlug.get(slugA);
+    const postB = postsBySlug.get(slugB);
+    return (postA?.weight ?? 0) - (postB?.weight ?? 0);
+  });
+  const currentIndex = allSlugs.indexOf(params.slug);
+  const prevSlug = allSlugs[currentIndex - 1] || null;
+  const nextSlug = allSlugs[currentIndex + 1] || null;
 
   if (!post) {
     notFound();
-    return null; // Return null to avoid rendering errors
+    return null;
   }
 
   return (
     <>
       <div className="">
-        <BackToHomeButton />
+        {/* <BackToHomeButton /> */}
+
+        <div className="flex justify-between mb-2 dark:text-white">
+          {prevSlug && (
+            <Link href={`/kagga/${prevSlug}`} className="hover:opacity-70">
+              &larr; Previous
+            </Link>
+          )}
+          {nextSlug && (
+            <Link href={`/kagga/${nextSlug}`} className="hover:opacity-70">
+              Next &rarr;
+            </Link>
+          )}
+        </div>
+
         <div className="max-w-xl mx-auto text-center">
-          <div className="relative mt-2">
-            <h1 className="text-2xl font-semibold dark:text-white-100">
-              {post.title}
-            </h1>
-            <p className="font-semibold tracking-wider text-gold-500">
-              {post.number}
-              <PostMetrics slug={post.slug} />
-            </p>
-          </div>
+          <h1 className="text-2xl font-semibold dark:text-white-100">
+            {post.title}
+          </h1>
+          <p className="font-semibold tracking-wider text-gold-500">
+            {post.number}
+            <PostMetrics slug={post.slug} />
+          </p>
 
           <Mdx code={post.body.code} />
         </div>
@@ -47,7 +67,7 @@ const BackToHomeButton = () => (
 export async function generateMetadata({
   params,
 }): Promise<Metadata | undefined> {
-  const post = findPostBySlug(params.slug);
+  const post = postsBySlug.get(params.slug);
 
   if (!post) {
     return;
@@ -59,7 +79,6 @@ export async function generateMetadata({
       title: post.title,
       type: "article",
       url: `${config.baseUrl}/kagga/${post.slug}`,
-      authors: "Ravi Banagere",
     },
     twitter: {
       card: "summary_large_image",
