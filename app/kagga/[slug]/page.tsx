@@ -46,7 +46,7 @@ export default async function Kagga({ params }) {
           <h1 className="text-2xl font-semibold">
             {post.title}
           </h1>
-          <p className="font-semibold tracking-wider text-gold-500">
+          <p className="font-semibold tracking-wider text-red-700">
             {post.number}
             <PostMetrics slug={post.slug} />
           </p>
@@ -59,7 +59,7 @@ export default async function Kagga({ params }) {
 }
 
 const BackToHomeButton = () => (
-  <button className="px-2 py-1 mb-2 text-sm font-medium text-white duration-500 rounded-full shadow md:mb-0 md:absolute hover:shadow-md bg-gold-600 hover:bg-opacity-80">
+  <button className="px-2 py-1 mb-2 text-sm font-medium text-white duration-500 bg-red-700 rounded-full shadow md:mb-0 md:absolute hover:shadow-md hover:bg-opacity-80">
     <Link href="/">← Home</Link>
   </button>
 );

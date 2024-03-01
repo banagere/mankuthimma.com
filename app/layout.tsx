@@ -12,10 +12,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className="flex flex-col max-w-5xl px-5 mx-auto">
-        <header className="flex justify-between mt-5 mb-3 border-b-2 border-gold-300">
+        <header className="flex justify-between mt-5 mb-3 border-b border-neutral-900">
           <Link
             href="/"
-            className="text-xl font-medium md:text-2xl hover:text-gold-500"
+            className="text-xl font-medium md:text-2xl hover:opacity-60"
           >
             Mankuthimmana Kagga
           </Link>

@@ -20,11 +20,11 @@ export default function Index() {
           <li className="flex items-baseline justify-between" key={slug}>
             <Link
               href={`/kagga/${slug}`}
-              className="text-lg font-medium truncate hover:text-gold-500"
+              className="text-lg font-medium truncate hover:text-red-700"
             >
               {title}
             </Link>
-            <p className="tracking-wider text-gold-500">{number}</p>
+            <p className="font-medium tracking-wider text-red-700">{number}</p>
           </li>
         ))}
       </ul>
