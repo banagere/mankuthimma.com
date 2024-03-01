@@ -8,21 +8,19 @@ interface RootLayoutProps {
   children: React.ReactNode;
 }
 
-const footerLinkClassName = "font-medium text-black hover:text-gold-500";
-
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className="flex flex-col max-w-5xl px-5 mx-auto bg-white dark:bg-black">
-        <header className="flex justify-between mb-3 border-b-2 mt-7 border-gold-300">
+      <body className="flex flex-col max-w-5xl px-5 mx-auto">
+        <header className="flex justify-between mt-5 mb-3 border-b-2 border-gold-300">
           <Link
             href="/"
             className="text-xl font-medium md:text-2xl hover:text-gold-500"
           >
             Mankuthimmana Kagga
           </Link>
-          <nav className="pt-1 text-black md:pt-2">
-            <Link href="/about" className={footerLinkClassName}>
+          <nav className="pt-1 md:pt-2">
+            <Link href="/about" className="font-medium hover:opacity-60">
               About
             </Link>
             {/* {" • "}

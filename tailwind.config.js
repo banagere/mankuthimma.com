@@ -5,12 +5,9 @@ module.exports = {
     "./components/**/*.{js,jsx,ts,tsx}",
     "./app/**/*.{js,jsx,ts,tsx}",
   ],
-  darkMode: "selector", // to enable dark mode, comment this line
   theme: {
     extend: {},
     colors: {
-      white: "#FFFFFF",
-      black: "#000000",
       "gold-300": "#dad1bd",
       "gold-400": "#cbbda4",
       "gold-500": "#b8a383",
