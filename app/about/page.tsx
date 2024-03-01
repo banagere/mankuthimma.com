@@ -5,7 +5,7 @@ import { Metadata } from "next";
 export default function About() {
   return (
     <>
-      <div className="mx-auto prose text-center dark:prose-invert prose-headings:text-center prose-h1:text-xl prose-hr:my-4 prose-hr:border-gold-400">
+      <div className="mx-auto prose text-center prose-headings:text-center prose-h1:text-xl prose-hr:my-4 prose-hr:border-gold-400">
         <h1>About</h1>
         <p>
           Mankuthimmana Kagga, written by Devanahalli Venkataramanaiah Gundappa

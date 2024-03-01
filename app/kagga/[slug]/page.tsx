@@ -29,7 +29,7 @@ export default async function Kagga({ params }) {
       <div className="">
         {/* <BackToHomeButton /> */}
 
-        <div className="flex justify-between mb-2 dark:text-white">
+        <div className="flex justify-between mb-2">
           {prevSlug && (
             <Link href={`/kagga/${prevSlug}`} className="hover:opacity-70">
               &larr; Previous

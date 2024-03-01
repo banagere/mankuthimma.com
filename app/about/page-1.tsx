@@ -3,7 +3,7 @@ export default function About() {
   return (
     <>
       <title>About</title>
-      <div className="max-w-2xl mx-auto prose dark:prose-invert prose-headings:text-center prose-h1:text-2xl prose-hr:my-4">
+      <div className="max-w-2xl mx-auto prose prose-headings:text-center prose-h1:text-2xl prose-hr:my-4">
         <h1>About</h1>
         <p>
           Mankuthimmana Kagga, written by Devanahalli Venkataramanaiah Gundappa
