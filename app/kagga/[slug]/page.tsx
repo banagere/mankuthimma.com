@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
-import { PostMetrics } from "ui/PostMetrics";
-import * as config from "@/src/seo/index";
+import { PostMetrics } from "@/src/ui/PostMetrics";
 import { notFound } from "next/navigation";
 import { Mdx } from "components/mdx";
 import { Metadata } from "next";
@@ -78,7 +77,7 @@ export async function generateMetadata({
     openGraph: {
       title: post.title,
       type: "article",
-      url: `${config.baseUrl}/kagga/${post.slug}`,
+      // url: `${config.baseUrl}/kagga/${post.slug}`,
     },
     twitter: {
       card: "summary_large_image",

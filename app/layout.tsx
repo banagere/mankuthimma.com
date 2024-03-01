@@ -1,4 +1,4 @@
-import "src/ui/main.scss";
+import "src/ui/main.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Head from "next/head";
@@ -28,7 +28,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         />
       </Head>
 
-      <body className="flex flex-col max-w-5xl px-5 mx-auto bg-white dark:bg-black-100">
+      <body className="flex flex-col max-w-5xl px-5 mx-auto font-sans bg-white dark:bg-black-100">
         <header className="flex justify-between mb-3 border-b-2 mt-7 border-gold-300">
           <Link
             href="/"
@@ -109,4 +109,18 @@ export const metadata: Metadata = {
   icons: {
     shortcut: "https://mankuthimma.com/favicons/favicon.ico",
   },
+  verification: {
+    google: "",
+    yandex: "",
+    // verifyGoogle: "qQhmLTwjNWYgQ7W42nSTq63xIrTch13X_11mmxBE9zk",
+    // verifyBing: "164551986DA47F7F6FC0D21A93FFFCA6",
+  },
+  // manifest: {
+  //   href: "",
+  //   search: "",
+  // rel: "manifest",
+  // href: "/site.webmanifest",
+  // },
+
+  // add feed.xml for 'rss' and 'atom'
 };
