@@ -107,6 +107,6 @@ export const metadata: Metadata = {
     // creator: "@banagere_",
   },
   icons: {
-    shortcut: "https://mankuthimma.com/favicons/favicon.ico",
+    shortcut: "https://mankuthimma.com/favicon.ico",
   },
 };
