@@ -7,11 +7,11 @@ import type {
 } from "next-seo";
 
 // favicons (some used here, some re-exported and used elsewhere)
-import faviconIco from "../../public/favicons/favicon.ico";
+// import faviconIco from "../../public/favicons/favicon.ico";
 // import faviconPng from "../../public/favicons/favicon.png";
-import appleTouchIconPng from "../../public/favicons/apple-touch-icon.png";
-import chrome512Png from "../../public/favicons/android-chrome-512x512.png";
-import chrome192Png from "../../public/favicons/android-chrome-192x192.png";
+// import appleTouchIconPng from "../../public/favicons/apple-touch-icon.png";
+// import chrome512Png from "../../public/favicons/android-chrome-512x512.png";
+// import chrome192Png from "../../public/favicons/android-chrome-192x192.png";
 import shareImage from "../../public/images/share-image.png";
 
 export const defaultSeo: DefaultSeoProps = {
@@ -54,15 +54,15 @@ export const defaultSeo: DefaultSeoProps = {
     // },
   ],
   additionalLinkTags: [
-    {
-      rel: "icon",
-      href: faviconIco.src,
-    },
-    {
-      rel: "apple-touch-icon",
-      href: appleTouchIconPng.src,
-      sizes: `${appleTouchIconPng.width}x${appleTouchIconPng.height}`,
-    },
+    // {
+    //   rel: "icon",
+    //   href: faviconIco.src,
+    // },
+    // {
+    //   rel: "apple-touch-icon",
+    //   href: appleTouchIconPng.src,
+    //   sizes: `${appleTouchIconPng.width}x${appleTouchIconPng.height}`,
+    // },
     {
       rel: "manifest",
       href: "/site.webmanifest",
@@ -117,9 +117,9 @@ export const articleJsonLd: Pick<
 
 // Re-export icons to use their static image data elsewhere
 export const favicons: Record<string, StaticImageData> = {
-  faviconIco,
-  appleTouchIconPng,
-  chrome512Png,
-  chrome192Png,
+  // faviconIco,
+  // appleTouchIconPng,
+  // chrome512Png,
+  // chrome192Png,
   shareImage,
 };
