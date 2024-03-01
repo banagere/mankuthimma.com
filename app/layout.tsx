@@ -1,4 +1,4 @@
-import "src/ui/main.scss";
+import "src/ui/main.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Head from "next/head";
