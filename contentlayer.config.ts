@@ -25,7 +25,7 @@ const Post = defineDocumentType(() => ({
 }));
 
 export default makeSource({
-  contentDirPath: "kagga",
+  contentDirPath: "src/kagga",
   documentTypes: [Post],
   mdx: {
     remarkPlugins: [remarkGfm],
