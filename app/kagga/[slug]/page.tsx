@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
-import { PostMetrics } from "ui/PostMetrics";
+import { PostMetrics } from "@/src/components/PostMetrics";
 import * as config from "@/src/seo/index";
 import { notFound } from "next/navigation";
 import { Mdx } from "components/mdx";
