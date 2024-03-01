@@ -2,7 +2,7 @@ import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
 import { PostMetrics } from "@/src/ui/PostMetrics";
 import { notFound } from "next/navigation";
-import { Mdx } from "components/mdx";
+import { Mdx } from "@/src/components/mdx";
 import { Metadata } from "next";
 
 const postsBySlug = new Map(allPosts.map((post) => [post.slug, post]));

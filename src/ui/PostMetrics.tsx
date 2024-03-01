@@ -1,7 +1,7 @@
 "use client";
 
 /* eslint-disable react-hooks/exhaustive-deps */
-import { usePostViews } from "components/usePostViews";
+import { usePostViews } from "@/src/components/usePostViews";
 import React from "react";
 
 export const PostMetrics = ({ slug }: { slug: string }) => {

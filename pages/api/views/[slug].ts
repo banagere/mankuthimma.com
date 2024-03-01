@@ -3,7 +3,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { z } from "zod";
 
 // Internal Libraries
-import prisma from "components/prisma";
+import prisma from "@/src/components/prisma";
 
 // Constants
 const METHOD_NOT_ALLOWED = 405;
