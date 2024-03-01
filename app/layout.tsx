@@ -40,7 +40,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <Link href="/about" className={footerLinkClassName}>
               About
             </Link>
-            {" • "}
+            {/* {" • "}
             <Link
               href={"https://twitter.com/Kagga_BOT"}
               className={footerLinkClassName}
@@ -49,7 +49,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               aria-label="Twitter (opens in a new tab)"
             >
               Twitter
-            </Link>
+            </Link> */}
           </nav>
         </header>
 
