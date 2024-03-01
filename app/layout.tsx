@@ -89,17 +89,17 @@ export const metadata: Metadata = {
     locale: "en-IN",
     type: "website",
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+  // robots: {
+  //   index: true,
+  //   follow: true,
+  //   googleBot: {
+  //     index: true,
+  //     follow: true,
+  //     "max-video-preview": -1,
+  //     "max-image-preview": "large",
+  //     "max-snippet": -1,
+  //   },
+  // },
   twitter: {
     title: "Mankuthimmana Kagga",
     card: "summary_large_image",
@@ -107,7 +107,9 @@ export const metadata: Metadata = {
     // creator: "@banagere_",
   },
   icons: {
-    shortcut: "https://mankuthimma.com/favicons/favicon.ico",
+    shortcut: "https://mankuthimma.com/favicon.ico",
+    apple: "",
+    icon: "",
   },
   verification: {
     google: "",
@@ -118,8 +120,8 @@ export const metadata: Metadata = {
   // manifest: {
   //   href: "",
   //   search: "",
-  // rel: "manifest",
-  // href: "/site.webmanifest",
+  //   rel: "manifest",
+  //   href: "/site.webmanifest",
   // },
 
   // add feed.xml for 'rss' and 'atom'
