@@ -1,7 +1,6 @@
 import "src/ui/main.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Head from "next/head";
 import Link from "next/link";
 import { Metadata } from "next";
 
@@ -9,34 +8,20 @@ interface RootLayoutProps {
   children: React.ReactNode;
 }
 
-const footerLinkClassName =
-  "font-medium text-black-100 hover:text-gold-500 dark:text-gray-300";
+const footerLinkClassName = "font-medium text-black hover:text-gold-500";
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <Head>
-        <meta
-          name="theme-color"
-          media="(prefers-color-scheme: light)"
-          content="#F8F8F8"
-        />
-        <meta
-          name="theme-color"
-          media="(prefers-color-scheme: dark)"
-          content="#202022"
-        />
-      </Head>
-
-      <body className="flex flex-col max-w-5xl px-5 mx-auto bg-white dark:bg-black-100">
+      <body className="flex flex-col max-w-5xl px-5 mx-auto bg-white dark:bg-black">
         <header className="flex justify-between mb-3 border-b-2 mt-7 border-gold-300">
           <Link
             href="/"
-            className="text-xl font-medium md:text-2xl hover:text-gold-500 dark:text-white-100"
+            className="text-xl font-medium md:text-2xl hover:text-gold-500"
           >
             Mankuthimmana Kagga
           </Link>
-          <nav className="pt-1 md:pt-2 text-black-100 dark:text-gray-300">
+          <nav className="pt-1 text-black md:pt-2">
             <Link href="/about" className={footerLinkClassName}>
               About
             </Link>
@@ -103,8 +88,6 @@ export const metadata: Metadata = {
   twitter: {
     title: "Mankuthimmana Kagga",
     card: "summary_large_image",
-    // site: "@banagere_",
-    // creator: "@banagere_",
   },
   icons: {
     shortcut: "https://mankuthimma.com/favicon.ico",

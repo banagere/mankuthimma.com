@@ -43,10 +43,10 @@ export default function About() {
         </p>
         <hr />
         <p>
-          This website is public. If you'd like to check the source code, visit{" "}
+          This website's code is publicly accessible. If you'd like to check it,
+          visit{" "}
           <Link
             href="https://github.com/banagere/mankuthimma.com"
-            rel="noreferrer noopener"
             target="_blank"
             aria-label="Github (opens in a new tab)"
           >
@@ -54,18 +54,6 @@ export default function About() {
           </Link>
           .
         </p>
-        {/* <p>
-          500+ unique visitors come to this site every month. If would be of
-          great help if you could lend a hand keeping this site alive by{" "}
-          <a
-            href="https://github.com/banagere/mankuthimma.com"
-            rel="noreferrer noopener"
-            target={"_blank"}
-          >
-            Sponsoring on Github
-          </a>
-          .
-        </p> */}
       </div>
     </>
   );

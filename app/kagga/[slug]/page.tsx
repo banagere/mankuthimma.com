@@ -43,7 +43,7 @@ export default async function Kagga({ params }) {
         </div>
 
         <div className="max-w-xl mx-auto text-center">
-          <h1 className="text-2xl font-semibold dark:text-white-100">
+          <h1 className="text-2xl font-semibold">
             {post.title}
           </h1>
           <p className="font-semibold tracking-wider text-gold-500">

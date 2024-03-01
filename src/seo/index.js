@@ -12,12 +12,4 @@ module.exports = {
   githubRepo: "mankuthimma.com",
   // verifyGoogle: "qQhmLTwjNWYgQ7W42nSTq63xIrTch13X_11mmxBE9zk",
   // verifyBing: "164551986DA47F7F6FC0D21A93FFFCA6",
-
-  // Me info
-  authorName: "Ravi Banagere",
-  authorEmail: "banagere.ravi@outlook.com",
-  authorSocial: {
-    github: "banagere",
-    twitter: "banagere_",
-  },
 };
