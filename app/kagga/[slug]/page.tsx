@@ -59,7 +59,7 @@ export default async function Kagga({ params }) {
 }
 
 const BackToHomeButton = () => (
-  <button className="px-2 py-1 mb-2 text-sm font-medium text-white duration-500 bg-red-700 rounded-full shadow md:mb-0 md:absolute hover:shadow-md hover:bg-opacity-80">
+  <button className="px-2 py-1 mb-2 text-sm font-medium text-white duration-500 bg-red-700 rounded-full shadow md:mb-0 md:absolute hover:shadow-md hover:bg-opacity-70">
     <Link href="/">← Home</Link>
   </button>
 );

@@ -15,12 +15,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <header className="flex justify-between mt-5 mb-3 border-b border-neutral-900">
           <Link
             href="/"
-            className="text-xl font-medium md:text-2xl hover:opacity-60"
+            className="text-xl font-medium md:text-2xl hover:opacity-70"
           >
             Mankuthimmana Kagga
           </Link>
           <nav className="pt-1 md:pt-2">
-            <Link href="/about" className="font-medium hover:opacity-60">
+            <Link href="/about" className="font-medium hover:opacity-70">
               About
             </Link>
             {/* {" • "}
