@@ -47,26 +47,32 @@ export default function RootLayout({ children }: RootLayoutProps) {
   );
 }
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://mankuthimma.com"),
-  title: {
-    default: "Mankuthimmana Kagga",
-    template: "%s",
-  },
+const meta = {
+  title: "Mankuthimmana Kagga",
   description:
     "An accessible repository for the people who love Mankuthimmana Kagga, written by DV Gundappa.",
+  url: "https://mankuthimma.com",
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL(`${meta.url}`),
+  title: {
+    default: `${meta.title}`,
+    template: "%s",
+  },
+  description: `${meta.description}`,
   keywords: "DV Gundappa, Kagga, Kannada",
   openGraph: {
-    title: "Mankuthimmana Kagga",
-    description:
-      "An accessible repository for the people who love Mankuthimmana Kagga, written by DV Gundappa.",
-    url: "https://mankuthimma.com",
-    siteName: "Mankuthimmana Kagga",
+    title: `${meta.title}`,
+    description: `${meta.description}`,
+    url: `${meta.url}`,
+    siteName: `${meta.title}`,
     images: [
       {
-        url: "https://mankuthimma.com/images/share-image.png",
+        url: `${meta.url}/images/opengraph-image.jpg`,
         width: 1200,
         height: 630,
+        alt: `${meta.title}`,
       },
     ],
     locale: "en-IN",
@@ -84,10 +90,13 @@ export const metadata: Metadata = {
     },
   },
   twitter: {
-    title: "Mankuthimmana Kagga",
+    title: `${meta.title}`,
     card: "summary_large_image",
+    images: `${meta.url}/images/opengraph-image.jpg`,
+    site: `${meta.url}`,
+    description: `${meta.description}`,
   },
   icons: {
-    shortcut: "https://mankuthimma.com/favicon.ico",
+    shortcut: `${meta.url}/favicon.ico`,
   },
 };

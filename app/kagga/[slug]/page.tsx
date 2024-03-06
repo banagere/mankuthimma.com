@@ -43,9 +43,7 @@ export default async function Kagga({ params }) {
         </div>
 
         <div className="max-w-xl mx-auto text-center">
-          <h1 className="text-2xl font-semibold">
-            {post.title}
-          </h1>
+          <h1 className="text-2xl font-semibold">{post.title}</h1>
           <p className="font-semibold tracking-wider text-red-700">
             {post.number}
             <PostMetrics slug={post.slug} />
@@ -79,6 +77,7 @@ export async function generateMetadata({
       title: post.title,
       type: "article",
       url: `${config.baseUrl}/kagga/${post.slug}`,
+      images: `${config.baseUrl}/images/opengraph-image.jpg`,
     },
     twitter: {
       card: "summary_large_image",
