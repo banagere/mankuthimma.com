@@ -1,4 +1,4 @@
-[![Homepage](https://mankuthimma.com/images/share-image.png)](https://mankuthimma.com)
+[![Homepage](https://mankuthimma.com/images/opengraph-image.jpg)](https://mankuthimma.com)
 
 ## Built using
 * **Framework**: [Next.js](https://nextjs.org/)

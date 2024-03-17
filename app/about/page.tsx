@@ -5,7 +5,7 @@ import { Metadata } from "next";
 export default function About() {
   return (
     <>
-      <div className="mx-auto prose text-center prose-headings:text-center prose-h1:text-xl prose-hr:my-4 prose-hr:border-red-700">
+      <div className="mx-auto prose text-center prose-h1:text-2xl prose-h1:font-semibold prose-p:text-neutral-950 prose-headings:text-center prose-hr:my-2 prose-hr:border-neutral-900">
         <h1>About</h1>
         <p>
           Mankuthimmana Kagga, written by Devanahalli Venkataramanaiah Gundappa
@@ -13,16 +13,17 @@ export default function About() {
           literary works in Kannada.
         </p>
         <p>
-          Kagga is a collection of 945 poems, each being four lines in length.
-          Some of these poems are written in old Kannada (ಹಳೆಗನ್ನಡ). It is
-          profound as well as poetic and most of them can be sung.
+          Mankuthimmana Kagga is a collection of 945 poems, each being four
+          lines in length. Some of these poems are written in old Kannada
+          (ಹಳೆಗನ್ನಡ). It is profound as well as poetic and most of them can be
+          sung.
         </p>
         <p>
-          Kagga explores deeper questions of life, contemplates the meaning of
-          the Ultimate Truth (reality) and advises us to lead a balanced life in
-          this complex and ever-changing world. Thus, Kagga advises us to follow
-          the middle path while extending one hand towards the Ultimate Truth
-          and the other hand to the phenomenal world.
+          Mankuthimmana Kagga explores deeper questions of life, contemplates
+          the meaning of the Ultimate Truth (reality) and advises us to lead a
+          balanced life in this complex and ever-changing world. Thus, Kagga
+          advises us to follow the middle path while extending one hand towards
+          the Ultimate Truth and the other hand to the phenomenal world.
         </p>
         <hr />
         <p>
