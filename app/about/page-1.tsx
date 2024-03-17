@@ -45,7 +45,6 @@ export default function About() {
           great help if you could lend a hand keeping this site alive by{" "}
           <a
             href="https://github.com/banagere/mankuthimma.com"
-            rel="noreferrer noopener"
             target={"_blank"}
           >
             Sponsoring on Github

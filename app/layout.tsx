@@ -27,7 +27,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <Link
               href={"https://twitter.com/Kagga_BOT"}
               className={footerLinkClassName}
-              rel="noreferrer noopener"
               target="_blank"
               aria-label="Twitter (opens in a new tab)"
             >
