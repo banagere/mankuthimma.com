@@ -5,6 +5,8 @@ import * as config from "@/src/seo/index";
 import { notFound } from "next/navigation";
 import { Mdx } from "components/mdx";
 import { Metadata } from "next";
+import { Suspense } from "react";
+import ViewCounter from "components/view-counter";
 
 const postsBySlug = new Map(allPosts.map((post) => [post.slug, post]));
 
@@ -46,7 +48,11 @@ export default async function Kagga({ params }) {
           <h1 className="text-2xl font-semibold">{post.title}</h1>
           <p className="font-semibold tracking-wider text-red-700">
             {post.number}
-            <PostMetrics slug={post.slug} />
+            {/* <PostMetrics slug={post.slug} /> */}
+            <Suspense>
+              {/* <ViewCounter /> */}
+              <ViewCounter slug={post.slug} />
+            </Suspense>
           </p>
 
           <Mdx code={post.body.code} />
