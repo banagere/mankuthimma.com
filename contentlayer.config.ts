@@ -3,7 +3,6 @@ import {
   defineDocumentType,
   makeSource,
 } from "contentlayer/source-files";
-import remarkGfm from "remark-gfm";
 
 const computedFields: ComputedFields = {
   slug: {
@@ -27,7 +26,4 @@ const Post = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: "src/kagga",
   documentTypes: [Post],
-  mdx: {
-    remarkPlugins: [remarkGfm],
-  },
 });
