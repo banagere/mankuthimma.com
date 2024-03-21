@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
-import { PostMetrics } from "@/src/components/PostMetrics";
 import * as config from "@/src/seo/index";
 import { notFound } from "next/navigation";
 import { Mdx } from "components/mdx";
 import { Metadata } from "next";
+import { Suspense } from "react";
+import ViewCounter from "components/view-counter";
 
 const postsBySlug = new Map(allPosts.map((post) => [post.slug, post]));
 
@@ -26,9 +27,7 @@ export default async function Kagga({ params }) {
 
   return (
     <>
-      <div className="">
-        {/* <BackToHomeButton /> */}
-
+      <div>
         <div className="flex justify-between mb-2">
           {prevSlug && (
             <Link href={`/kagga/${prevSlug}`} className="hover:opacity-70">
@@ -46,7 +45,9 @@ export default async function Kagga({ params }) {
           <h1 className="text-2xl font-semibold">{post.title}</h1>
           <p className="font-semibold tracking-wider text-red-700">
             {post.number}
-            {/* <PostMetrics slug={post.slug} /> */}
+            {/* <Suspense>
+              <ViewCounter slug={post.slug} />
+            </Suspense> */}
           </p>
 
           <Mdx code={post.body.code} />
@@ -55,12 +56,6 @@ export default async function Kagga({ params }) {
     </>
   );
 }
-
-const BackToHomeButton = () => (
-  <button className="px-2 py-1 mb-2 text-sm font-medium text-white duration-500 bg-red-700 rounded-full shadow md:mb-0 md:absolute hover:shadow-md hover:bg-opacity-70">
-    <Link href="/">← Home</Link>
-  </button>
-);
 
 export async function generateMetadata({
   params,

@@ -1,62 +1,17 @@
-// External Libraries
-import type { NextApiRequest, NextApiResponse } from "next";
-import { z } from "zod";
+// api/views/[slug].js or a similar API route
+import { kv } from "@vercel/kv";
 
-// Internal Libraries
-import prisma from "components/prisma";
+export default async function handler(req, res) {
+  const { slug } = req.query;
 
-// Constants
-const METHOD_NOT_ALLOWED = 405;
-const INTERNAL_SERVER_ERROR = 500;
-
-// Helper function to handle GET request
-async function handleGet(slug: string) {
-  return await prisma.post.findUnique({
-    where: { slug },
-  });
-}
-
-// Helper function to handle POST request
-async function handlePost(slug: string) {
-  return await prisma.post.upsert({
-    where: { slug },
-    create: { slug, views: 1 },
-    update: { views: { increment: 1 } },
-  });
-}
-
-// Main API handler
-export default async function Handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  try {
-    // Validate and parse the slug from the request
-    const slug = z.string().parse(req.query.slug);
-
-    // Switch based on HTTP method
-    switch (req.method) {
-      case "GET": {
-        const post = await handleGet(slug);
-        res.json(post?.views || 1);
-        break;
-      }
-
-      case "POST": {
-        const post = await handlePost(slug);
-        res.json(post?.views || 1);
-        break;
-      }
-
-      default:
-        res.setHeader("Allow", ["GET", "POST"]);
-        res.status(METHOD_NOT_ALLOWED).send("Method Not Allowed");
-    }
-  } catch (err: any) {
-    console.error(err.message);
-    res.status(INTERNAL_SERVER_ERROR).json({
-      statusCode: INTERNAL_SERVER_ERROR,
-      message: err.message,
-    });
+  // Ensure the slug is valid
+  if (!slug) {
+    return res.status(400).json({ error: "Slug is required" });
   }
+
+  const key = `views-${slug}`; // Prefixing the key to avoid collisions
+  const views = await kv.incr(key); // Increment the view count for this slug
+
+  // Return the updated view count
+  res.status(200).json({ views });
 }
