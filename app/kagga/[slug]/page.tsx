@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
-import { PostMetrics } from "@/src/components/PostMetrics";
 import * as config from "@/src/seo/index";
 import { notFound } from "next/navigation";
 import { Mdx } from "components/mdx";
@@ -48,9 +47,7 @@ export default async function Kagga({ params }) {
           <h1 className="text-2xl font-semibold">{post.title}</h1>
           <p className="font-semibold tracking-wider text-red-700">
             {post.number}
-            {/* <PostMetrics slug={post.slug} /> */}
             <Suspense>
-              {/* <ViewCounter /> */}
               <ViewCounter slug={post.slug} />
             </Suspense>
           </p>
