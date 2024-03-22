@@ -8,15 +8,19 @@ import brahmanChameleonMdx from './brahman-chameleon.mdx.json' assert { type: 'j
 import brahmanIsAHouseholderMdx from './brahman-is-a-householder.mdx.json' assert { type: 'json' }
 import brahmanIsLifeMdx from './brahman-is-life.mdx.json' assert { type: 'json' }
 import brahmanIsMilkCreationIsFrothMdx from './brahman-is-milk-creation-is-froth.mdx.json' assert { type: 'json' }
+import canYouEscapeTheMindMdx from './can-you-escape-the-mind.mdx.json' assert { type: 'json' }
 import centerOfTheUniverseMdx from './center-of-the-universe.mdx.json' assert { type: 'json' }
 import churningOfWorldAndLifeMdx from './churning-of-world-and-life.mdx.json' assert { type: 'json' }
 import companyOfTheWorldMdx from './company-of-the-world.mdx.json' assert { type: 'json' }
+import compassionMdx from './compassion.mdx.json' assert { type: 'json' }
 import completeVisionMdx from './complete-vision.mdx.json' assert { type: 'json' }
 import cosmicDebtMdx from './cosmic-debt.mdx.json' assert { type: 'json' }
 import cosmicDramaMdx from './cosmic-drama.mdx.json' assert { type: 'json' }
 import cravingIsTheMotherOpportunityIsTheFatherMdx from './craving-is-the-mother-opportunity-is-the-father.mdx.json' assert { type: 'json' }
 import creatorOrImpMdx from './creator-or-imp.mdx.json' assert { type: 'json' }
 import critiqueWithAwarenessMdx from './critique-with-awareness.mdx.json' assert { type: 'json' }
+import dangerousCreatorMdx from './dangerous-creator.mdx.json' assert { type: 'json' }
+import divineShareMdx from './divine-share.mdx.json' assert { type: 'json' }
 import energyFlowMdx from './energy-flow.mdx.json' assert { type: 'json' }
 import equalityMdx from './equality.mdx.json' assert { type: 'json' }
 import essenseOfProgressMdx from './essense-of-progress.mdx.json' assert { type: 'json' }
@@ -49,6 +53,7 @@ import lifeDanceMdx from './life-dance.mdx.json' assert { type: 'json' }
 import lifeIsAGreatTreasureMdx from './life-is-a-great-treasure.mdx.json' assert { type: 'json' }
 import lifesDesignMdx from './lifes-design.mdx.json' assert { type: 'json' }
 import machineryOfEarthAndSkyMdx from './machinery-of-earth-and-sky.mdx.json' assert { type: 'json' }
+import machineryOfFateMdx from './machinery-of-fate.mdx.json' assert { type: 'json' }
 import mayaIsKaikeyiMdx from './maya-is-kaikeyi.mdx.json' assert { type: 'json' }
 import meaningOfLifeMdx from './meaning-of-life.mdx.json' assert { type: 'json' }
 import measurableImmeasurableMdx from './measurable-immeasurable.mdx.json' assert { type: 'json' }
@@ -71,4 +76,4 @@ import worldPlayMdx from './world-play.mdx.json' assert { type: 'json' }
 import worldlyAndOtherWorldlyMdx from './worldly-and-other-worldly.mdx.json' assert { type: 'json' }
 import worshipLifeMdx from './worship-life.mdx.json' assert { type: 'json' }
 
-export const allPosts = [aNewDesireEveryMomentMdx, aridMenanceMdx, artificialComesFromNaturalMdx, beingAwarenessBlissMdx, brahmanChameleonMdx, brahmanIsAHouseholderMdx, brahmanIsLifeMdx, brahmanIsMilkCreationIsFrothMdx, centerOfTheUniverseMdx, churningOfWorldAndLifeMdx, companyOfTheWorldMdx, completeVisionMdx, cosmicDebtMdx, cosmicDramaMdx, cravingIsTheMotherOpportunityIsTheFatherMdx, creatorOrImpMdx, critiqueWithAwarenessMdx, energyFlowMdx, equalityMdx, essenseOfProgressMdx, eternalDharmaOfLifeMdx, expansionContractionMdx, explosionOfTruthMdx, foreverAncientForeverNewMdx, forgivenessMdx, fourFacesMdx, foxMonkeyHumanMdx, gardenOfBrahmanMdx, goodAndEvilMdx, handSketchOfFateMdx, harmonyInTheFamilyMdx, humansOrDemonsMdx, hundredStringDanceMdx, illusionOfComfortMdx, illusoryLightMdx, inanimateAnimateMdx, indestructibleUniverseMdx, infiniteFrameFinitePictureMdx, innerExperienceMdx, innerVisionMdx, invisibleSchemeMdx, invocationMdx, joyfulHeartMdx, killingWithASmileMdx, lawAndDecisionMdx, lifeDanceMdx, lifeIsAGreatTreasureMdx, lifesDesignMdx, machineryOfEarthAndSkyMdx, mayaIsKaikeyiMdx, meaningOfLifeMdx, measurableImmeasurableMdx, natureIsEternalCultivationMdx, naturesSchemeOfFluidsMdx, peoplesVoiceInCreationMdx, playingCardsMdx, problemResolutionMdx, punishmentOfNaturalnessMdx, scientistMdx, selfExpansionMdx, sightDependsOnTheEyesMdx, storyOfProgressMdx, threeKingsMdx, twoWitnessesMdx, wayOfFateMdx, whoIsAFoolMdx, whyThisTimidityMdx, worldPlayMdx, worldlyAndOtherWorldlyMdx, worshipLifeMdx]
+export const allPosts = [aNewDesireEveryMomentMdx, aridMenanceMdx, artificialComesFromNaturalMdx, beingAwarenessBlissMdx, brahmanChameleonMdx, brahmanIsAHouseholderMdx, brahmanIsLifeMdx, brahmanIsMilkCreationIsFrothMdx, canYouEscapeTheMindMdx, centerOfTheUniverseMdx, churningOfWorldAndLifeMdx, companyOfTheWorldMdx, compassionMdx, completeVisionMdx, cosmicDebtMdx, cosmicDramaMdx, cravingIsTheMotherOpportunityIsTheFatherMdx, creatorOrImpMdx, critiqueWithAwarenessMdx, dangerousCreatorMdx, divineShareMdx, energyFlowMdx, equalityMdx, essenseOfProgressMdx, eternalDharmaOfLifeMdx, expansionContractionMdx, explosionOfTruthMdx, foreverAncientForeverNewMdx, forgivenessMdx, fourFacesMdx, foxMonkeyHumanMdx, gardenOfBrahmanMdx, goodAndEvilMdx, handSketchOfFateMdx, harmonyInTheFamilyMdx, humansOrDemonsMdx, hundredStringDanceMdx, illusionOfComfortMdx, illusoryLightMdx, inanimateAnimateMdx, indestructibleUniverseMdx, infiniteFrameFinitePictureMdx, innerExperienceMdx, innerVisionMdx, invisibleSchemeMdx, invocationMdx, joyfulHeartMdx, killingWithASmileMdx, lawAndDecisionMdx, lifeDanceMdx, lifeIsAGreatTreasureMdx, lifesDesignMdx, machineryOfEarthAndSkyMdx, machineryOfFateMdx, mayaIsKaikeyiMdx, meaningOfLifeMdx, measurableImmeasurableMdx, natureIsEternalCultivationMdx, naturesSchemeOfFluidsMdx, peoplesVoiceInCreationMdx, playingCardsMdx, problemResolutionMdx, punishmentOfNaturalnessMdx, scientistMdx, selfExpansionMdx, sightDependsOnTheEyesMdx, storyOfProgressMdx, threeKingsMdx, twoWitnessesMdx, wayOfFateMdx, whoIsAFoolMdx, whyThisTimidityMdx, worldPlayMdx, worldlyAndOtherWorldlyMdx, worshipLifeMdx]
