@@ -3,6 +3,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Link from "next/link";
 import { Metadata } from "next";
+import CMDK from "components/cmdk";
+import Shortcuts from "components/shortcuts";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -40,6 +42,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <footer className="py-5">
           <Analytics />
           <SpeedInsights />
+          {/* <CMDK /> */}
+          {/* <Shortcuts /> */}
         </footer>
       </body>
     </html>

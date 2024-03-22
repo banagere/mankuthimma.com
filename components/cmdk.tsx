@@ -1,8 +1,30 @@
+"use client";
+
+import React from "react"; // Ensuring React is properly imported
 import { Command } from "cmdk";
 
-const CommandMenu = () => {
+const CMDK = () => {
+  const [open, setOpen] = React.useState(false);
+
+  // Toggle the menu when ⌘K is pressed
+  React.useEffect(() => {
+    const down = (e) => {
+      if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault();
+        setOpen((open) => !open);
+      }
+    };
+
+    document.addEventListener("keydown", down);
+    return () => document.removeEventListener("keydown", down);
+  }, []);
+
   return (
-    <Command label="Command Menu">
+    <Command.Dialog
+      open={open}
+      onOpenChange={setOpen}
+      label="Global Command Menu"
+    >
       <Command.Input />
       <Command.List>
         <Command.Empty>No results found.</Command.Empty>
@@ -16,8 +38,8 @@ const CommandMenu = () => {
 
         <Command.Item>Apple</Command.Item>
       </Command.List>
-    </Command>
+    </Command.Dialog>
   );
 };
 
-export default CommandMenu;
+export default CMDK;
