@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@next/env": "^14.1.4",
-    "@tailwindcss/typography": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.11",
     "@vercel/analytics": "^1.2.2",
     "@vercel/kv": "^1.0.1",
     "@vercel/speed-insights": "^1.0.10",
@@ -24,12 +24,12 @@
     "next-sitemap": "^4.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sharp": "^0.33.2",
+    "sharp": "^0.33.3",
     "webpack": "^5.91.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
-    "@types/react": "^18.2.67",
+    "@types/react": "^18.2.72",
     "autoprefixer": "^10.4.19",
     "eslint": "8.57.0",
     "eslint-config-next": "14.1.4",
