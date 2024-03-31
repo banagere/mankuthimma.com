@@ -45,9 +45,9 @@ export default async function Kagga({ params }) {
           <h1 className="text-2xl font-semibold">{post.title}</h1>
           <p className="font-semibold tracking-wider text-red-700">
             {post.number}
-            <Suspense>
+            {/* <Suspense>
               <ViewCounter slug={post.slug} />
-            </Suspense>
+            </Suspense> */}
           </p>
 
           <Mdx code={post.body.code} />
