@@ -2,18 +2,10 @@ import { kv } from "@vercel/kv";
 
 export default async function listMyKeys() {
   const allKeys = await kv.keys("*");
-  const one = await kv.get(allKeys[0]);
+  // const one = await kv.get(allKeys[5]);
 
-  //   for (const i in allKeys) {
-  //     const v = await kv.get[i];
-  //   }
+  const allValues = await Promise.all(allKeys.map((key) => kv.get(key)));
+  const valuesString = allValues.join(",");
 
-  //   let keyValuePairs = {};
-
-  //   for (const key of allKeys) {
-  //     const value = await kv.get(key);
-  //     keyValuePairs[key] = value;
-  //   }
-
-  return allKeys;
+  return valuesString;
 }
