@@ -3,8 +3,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Link from "next/link";
 import { Metadata } from "next";
-import CMDK from "components/cmdk";
-import Shortcuts from "components/shortcuts";
+import CMDK from "@/src/components/cmdk";
+import Shortcuts from "@/src/components/shortcuts";
 
 interface RootLayoutProps {
   children: React.ReactNode;
