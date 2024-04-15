@@ -102,4 +102,11 @@ export const metadata: Metadata = {
   icons: {
     shortcut: `${meta.url}/favicon.ico`,
   },
+  verification: {
+    // google: "qQhmLTwjNWYgQ7W42nSTq63xIrTch13X_11mmxBE9zk",
+    yandex: "",
+    other: {
+      // bing: "164551986DA47F7F6FC0D21A93FFFCA6",
+    },
+  },
 };

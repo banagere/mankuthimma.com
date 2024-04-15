@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { allPosts } from "contentlayer/generated";
-import * as config from "@/src/seo/index";
 import { notFound } from "next/navigation";
 import { Mdx } from "@/src/components/mdx";
 import { Metadata } from "next";
@@ -62,6 +61,13 @@ export async function generateMetadata({
 }): Promise<Metadata | undefined> {
   const post = postsBySlug.get(params.slug);
 
+  const meta = {
+    title: "Mankuthimmana Kagga",
+    description:
+      "An accessible repository for the people who love Mankuthimmana Kagga, written by DV Gundappa.",
+    url: "https://mankuthimma.com",
+  };
+
   if (!post) {
     return;
   }
@@ -71,8 +77,8 @@ export async function generateMetadata({
     openGraph: {
       title: post.title,
       type: "article",
-      url: `${config.baseUrl}/kagga/${post.slug}`,
-      images: `${config.baseUrl}/images/opengraph-image.jpg`,
+      url: `${meta.url}/kagga/${post.slug}`,
+      images: `${meta.url}/images/opengraph-image.jpg`,
     },
     twitter: {
       card: "summary_large_image",
