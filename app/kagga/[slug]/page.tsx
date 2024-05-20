@@ -26,15 +26,21 @@ export default async function Kagga({ params }) {
 
   return (
     <>
-      <div>
+      <div className="px-5 pb-5 mx-auto max-w-7xl">
         <div className="flex justify-between mb-2">
           {prevSlug && (
-            <Link href={`/kagga/${prevSlug}`} className="hover:opacity-70">
+            <Link
+              href={`/kagga/${prevSlug}`}
+              className="duration-500 hover:opacity-70"
+            >
               &larr; Previous
             </Link>
           )}
           {nextSlug && (
-            <Link href={`/kagga/${nextSlug}`} className="hover:opacity-70">
+            <Link
+              href={`/kagga/${nextSlug}`}
+              className="duration-500 hover:opacity-70"
+            >
               Next &rarr;
             </Link>
           )}
@@ -42,7 +48,7 @@ export default async function Kagga({ params }) {
 
         <div className="max-w-xl mx-auto text-center">
           <h1 className="text-2xl font-semibold">{post.title}</h1>
-          <p className="font-semibold tracking-wider text-red-700">
+          <p className="pb-5 font-semibold tracking-wider text-red-700">
             {post.number}
             <Suspense>
               <ViewCounter slug={post.slug} />

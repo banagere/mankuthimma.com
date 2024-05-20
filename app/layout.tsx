@@ -3,6 +3,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Link from "next/link";
 import { Metadata } from "next";
+import Image from "next/image";
+import logo from "@/public/favicons/apple-touch-icon.png";
 import CMDK from "@/src/components/cmdk";
 import Shortcuts from "@/src/components/shortcuts";
 
@@ -13,38 +15,30 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className="flex flex-col max-w-5xl px-5 mx-auto">
-        <header className="flex justify-between mt-5 mb-3 border-b border-neutral-900">
-          <Link
-            href="/"
-            className="text-xl font-medium md:text-2xl hover:opacity-70"
-          >
-            Mankuthimmana Kagga
-          </Link>
-          <nav className="pt-1 md:pt-2">
-            <Link href="/about" className="font-medium hover:opacity-70">
-              About
+      <body className="flex flex-col scroll-smooth selection:bg-black selection:text-white">
+        <header className="">
+          <div className="flex p-5 mx-auto max-w-7xl">
+            <Link href="/" className="duration-500 hover:opacity-80">
+              <Image
+                src={logo}
+                alt={"Kagga Logo"}
+                width={50}
+                height={50}
+                priority
+              />
             </Link>
-            {/* {" • "}
-            <Link
-              href={"https://twitter.com/Kagga_BOT"}
-              className={footerLinkClassName}
-              target="_blank"
-              aria-label="Twitter (opens in a new tab)"
-            >
-              Twitter
-            </Link> */}
-          </nav>
+          </div>
         </header>
 
-        <main>{children}</main>
-
-        <footer className="py-5">
+        <main>
+          {children}
           <Analytics />
           <SpeedInsights />
           {/* <CMDK /> */}
           {/* <Shortcuts /> */}
-        </footer>
+        </main>
+
+        {/* <footer className="py-5"></footer> */}
       </body>
     </html>
   );
