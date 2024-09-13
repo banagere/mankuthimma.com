@@ -5,8 +5,6 @@ import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
 import logo from "@/public/favicons/apple-touch-icon.png";
-import CMDK from "@/src/components/cmdk";
-import Shortcuts from "@/src/components/shortcuts";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -34,11 +32,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
           {children}
           <Analytics />
           <SpeedInsights />
-          {/* <CMDK /> */}
-          {/* <Shortcuts /> */}
         </main>
-
-        {/* <footer className="py-5"></footer> */}
       </body>
     </html>
   );

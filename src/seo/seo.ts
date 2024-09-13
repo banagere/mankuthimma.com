@@ -1,6 +1,4 @@
-import type { DefaultSeoProps, SocialProfileJsonLdProps } from "next-seo";
-
-export const defaultSeo: DefaultSeoProps = {
+export const seo = {
   additionalMetaTags: [],
   additionalLinkTags: [
     // {
