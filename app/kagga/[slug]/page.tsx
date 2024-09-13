@@ -26,7 +26,7 @@ export default async function Kagga({ params }) {
 
   return (
     <>
-      <div className="px-5 pb-5 mx-auto max-w-7xl">
+      <div className="px-5 pb-10 mx-auto max-w-7xl">
         <div className="flex justify-between mb-2">
           {prevSlug && (
             <Link
@@ -84,7 +84,7 @@ export async function generateMetadata({
       title: post.title,
       type: "article",
       url: `${meta.url}/kagga/${post.slug}`,
-      images: `${meta.url}/images/opengraph-image.jpg`,
+      images: `${meta.url}/opengraph-image.jpg`,
     },
     twitter: {
       card: "summary_large_image",

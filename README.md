@@ -1,1 +1,1 @@
-[![Homepage](https://mankuthimma.com/images/opengraph-image.jpg)](https://mankuthimma.com)
+[![Homepage](https://mankuthimma.com/opengraph-image.jpg)](https://mankuthimma.com)

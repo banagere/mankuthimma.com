@@ -1,10 +1,10 @@
-import "src/ui/main.css";
+import "../public/global.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
-import logo from "@/public/favicons/apple-touch-icon.png";
+import logo from "@/public/apple-touch-icon.png";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     siteName: `${meta.title}`,
     images: [
       {
-        url: `${meta.url}/images/opengraph-image.jpg`,
+        url: `${meta.url}/opengraph-image.jpg`,
         width: 1200,
         height: 630,
         alt: `${meta.title}`,
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
   twitter: {
     title: `${meta.title}`,
     card: "summary_large_image",
-    images: `${meta.url}/images/opengraph-image.jpg`,
+    images: `${meta.url}/opengraph-image.jpg`,
     site: `${meta.url}`,
     description: `${meta.description}`,
   },
@@ -97,4 +97,27 @@ export const metadata: Metadata = {
       // bing: "164551986DA47F7F6FC0D21A93FFFCA6",
     },
   },
+  // {
+  //   rel: "alternate",
+  //   href: "/feed.xml",
+  //   type: "application/rss+xml",
+  //   // @ts-ignore
+  //   title: `${config.siteName} (RSS)`,
+  // },
+  // {
+  //   rel: "alternate",
+  //   href: "/feed.atom",
+  //   type: "application/atom+xml",
+  //   // @ts-ignore
+  //   title: `${config.siteName} (Atom)`,
+  // },
+  // {
+  //   rel: "humans",
+  //   href: "/humans.txt",
+  // },
+  // {
+  //   rel: "pgpkey",
+  //   href: "/pubkey.asc",
+  //   type: "application/pgp-keys",
+  // },
 };
