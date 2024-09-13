@@ -9,7 +9,7 @@ const postsBySlug = new Map(allPosts.map((post) => [post.slug, post]));
 function useArrowNavigation({ params }) {
   const router = useRouter();
 
-  const post = postsBySlug.get(params?.slug);
+  // const post = postsBySlug.get(params?.slug);
   const allSlugs = Array.from(postsBySlug.keys()).sort((slugA, slugB) => {
     const postA = postsBySlug.get(slugA);
     const postB = postsBySlug.get(slugB);
