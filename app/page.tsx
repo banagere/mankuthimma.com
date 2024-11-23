@@ -34,7 +34,7 @@ function InfoSection() {
         "I hope these Kagga's change your outlook towards life, as it did to mine!",
         "Please buy the book to support the publishers, printers, editors and authors!",
         <>
-          Also, this website's code is publicly accessible. If you'd like to
+          Also, this website&apos;s code is publicly accessible. If you&apos;d like to
           check it, visit{" "}
           <Link
             href="https://github.com/banagere/mankuthimma.com"
